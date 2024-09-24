@@ -1,0 +1,51 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Operation Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  padding: 0.6rem;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+  background-color: #00061a;
+
+}
+#root{
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+a:hover{
+  color: var(--main-color-hover);
+}
+
+:root{
+  --main-color: blueviolet;
+  --main-color-hover: blueviolet;
+  --bgc: #fff;
+  --fc: #000;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Operation+Mono:wght@400;700&display=swap');
