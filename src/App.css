@@ -1,7 +1,7 @@
 .App {
     background-color: var(--bgc);
     color: var(--fg);
-    width: 80%;
+    width: 85%;
     border-radius: 1rem;
     padding: 1.4rem;
     display: flex;

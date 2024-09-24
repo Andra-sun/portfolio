@@ -3,6 +3,15 @@ import "./Aside.css";
 function Aside() {
     return (
         <aside className="Aside">
+            <div id="fixed">
+                <select>
+                    <option>pt</option>
+                </select>
+                <select>
+                    <option>light</option>
+                </select>
+                
+            </div>
             <div id="foto">
                 <img
                     src="https://andra-sun.github.io/portifolio/img/profile1.jpg"
