@@ -14,7 +14,7 @@ body {
   flex-direction: row; 
   justify-content: center;
   align-items: center;
-  background-color: #00061a;
+  background-color: var(--bgc2);
 
 }
 #root{
@@ -36,16 +36,32 @@ code {
 a {
   color: var(--main-color);
   text-decoration: none;
+  transition: transform 0.3s;
 }
 a:hover{
   color: var(--main-color-hover);
+  transform: scale(1.09);
 }
 
-:root{
+:root {
   --main-color: blueviolet;
   --main-color-hover: blueviolet;
-  --bgc: #fff;
-  --fc: #000;
+  /* --bgc: #fff;  
+  --fc: #000;   
+  --bgc2: #010118;
+  --bgc3: #ccc; */
+  --bgc: #000513; 
+  --fc: white;   
+  --bgc2: #010118; 
+  --bgc3: #22202e;
+  /* --bgc4: #ececec; */
+  --bgc4: #010218;
+}
+.dark-theme {
+  --bgc: #000513; 
+  --fc: white;   
+  --bgc2: #010118; 
+  --bgc3: #22202e;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Operation+Mono:wght@400;700&display=swap');
