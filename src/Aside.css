@@ -15,6 +15,12 @@ aside {
     flex-direction: column;
     justfy-content: space-between;
 }
+#fixed select{
+    border: 2px solid var(--main-color);
+    margin: 5px;
+    backgraund-color: transparent;
+    border-redius: 4px;
+}
 #foto {
     border-radius: 12px;
     box-shadow: rgba(182, 182, 197, 0.2) 0px -2px 20px 7px;
