@@ -1,6 +1,6 @@
 .App {
     background-color: var(--bgc);
-    color: var(--fg);
+    color: var(--fc);
     width: 85%;
     border-radius: 1rem;
     padding: 1.4rem;

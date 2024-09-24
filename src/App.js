@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { useTranslation } from "react-i18next"; // Importa useTranslation
+import { useTranslation } from "react-i18next"; 
 import "./App.css";
 import Nav from "./Nav";
 
 function App() {
-    const { t } = useTranslation(); // Inicializa useTranslation
+    const { t } = useTranslation();
     const [content, setContent] = useState("sobre");
 
     const navClick = (newContent) => {
