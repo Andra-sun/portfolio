@@ -1,0 +1,25 @@
+.projetos{
+    display: block;
+    overflow-x: auto;
+    margin: 0;
+}
+.projetos li{
+    margin-bottom: 3rem;
+}
+.projetos li h2{
+    margin: 10px;
+}
+.projetos li p{
+    margin: 4px 0 4px 20px;
+}
+.technologies{
+    margin: 1rem  0 1rem 0;
+    width: 100%;
+    overflow-x: auto;
+}
+.tech{
+    padding: 6px 10px;
+    margin: 0 10px 0 10px;
+    background-color: rgba(111, 0, 255, 0.158);
+    border-radius: 1rem;
+}

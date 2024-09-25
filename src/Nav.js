@@ -7,6 +7,7 @@ function Nav({ onNavClick }) {
             <a href="#" title="esperiencia" onClick={() => onNavClick('Esperiencia')}><i className="fi fi-sr-brain"></i></a>
             <a href="#" title="projetos" onClick={() => onNavClick('projetos')}><i className="fi fi-sr-apps"></i></a>
             <a href="#" title="mensagem" onClick={() => onNavClick('mensagem')}><i className="fi fi-sr-paper-plane"></i></a>
+            <a href="#" title="adicionar" onClick={() => onNavClick('adicionar')}><i className="fi fi-sr-add"></i></a>
         </nav>
     );
 }

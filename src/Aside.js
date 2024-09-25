@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 function Aside() {
 
     //theme
-    const [theme, setTheme] = useState('dark');
+    const [theme ,setTheme] = useState('dark');
 
     const handleThemeChange = (event) => {
         const selectedTheme = event.target.value;
