@@ -45,24 +45,22 @@ a:hover{
 
 :root {
   --main-color: blueviolet;
-  --main-color-hover: blueviolet;
-  /* --bgc: #fff;  
-  --fc: #000;   
-  --bgc2: #010118;
-  --bgc3: #ccc; */
-  --bgc: #000513; 
+  --main-color-hover: rgb(114, 42, 180);
   --fc: white;   
-  --bgc2: #010118; 
-  --bgc3: #0f093333;
-  /* --bgc3: #22202e; */
-  /* --bgc4: #ececec; */
-  --bgc4: #010218;
-}
-.dark-theme {
   --bgc: #000513; 
-  --fc: white;   
   --bgc2: #010118; 
   --bgc3: #22202e;
+  --bgc4: #010218;
+}
+
+.light-theme {
+  --main-color: rgb(71, 204, 82);
+  --main-color-hover: rgb(63, 167, 72);
+  --bgc: #fff;  /* fundo do card*/
+  --fc: #000;   /* cor da fonte*/
+  --bgc2: #dddddd; /* fundo do html*/
+  --bgc3: #ccc; /* fundo da lista*/
+  --bgc4: #ececec; /* fundo da lista hover*/
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Operation+Mono:wght@400;700&display=swap');

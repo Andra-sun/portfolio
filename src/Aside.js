@@ -5,16 +5,16 @@ import { useTranslation } from 'react-i18next';
 function Aside() {
 
     //theme
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('dark');
 
     const handleThemeChange = (event) => {
         const selectedTheme = event.target.value;
         setTheme(selectedTheme);
 
-        if (selectedTheme === 'dark') {
-            document.documentElement.classList.add('dark-theme');
+        if (selectedTheme === 'light') {
+            document.documentElement.classList.add('light-theme');
         } else {
-            document.documentElement.classList.remove('dark-theme');
+            document.documentElement.classList.remove('light-theme');
         }
     };
 
@@ -33,8 +33,8 @@ function Aside() {
                     <option value="en">en</option>
                 </select>
                 <select id="themeSwitcher" onChange={handleThemeChange}>
-                    <option value="light">{t("claro")}</option>
                     <option value="dark">{t("escuro")}</option>
+                    <option value="light">{t("claro")}</option>
                 </select>
             </div>
             <div id="foto">
@@ -49,24 +49,17 @@ function Aside() {
                     <p id="apelido">Andra</p>
                 </div>
                 <div id="mais-infos">
-                    <a href="#">
-                        <i className="fi fi-brands-instagram">
+                    <a href="https://github.com/Andra-sun">
+                        <i className="fi fi-sr-phone-call">
                             <div className="text-container">
-                                <p>c.a.m.i_le</p>
+                                <p>(77)998369814</p>
                             </div>
                         </i>
                     </a>
                     <a href="https://github.com/Andra-sun">
-                        <i className="fi fi-brands-github">
+                        <i className="fi fi-sr-map-marker">
                             <div className="text-container">
-                                <p>Andra-sun</p>
-                            </div>
-                        </i>
-                    </a>
-                    <a href="#">
-                        <i className="fi fi-brands-linkedin">
-                            <div className="text-container">
-                                <p>camile andrade guimaraes</p>
+                                <p>Guanambi-BA</p>
                             </div>
                         </i>
                     </a>
@@ -77,6 +70,21 @@ function Aside() {
                             </div>
                         </i>
                     </a>
+                </div>
+                <div id="redes">
+                    <a href="#">
+                            <i className="fi fi-brands-instagram">
+                            </i>
+                        </a>
+                        <a href="https://github.com/Andra-sun">
+                            <i className="fi fi-brands-github">
+                            </i>
+                        </a>
+                        <a href="#">
+                        <i className="fi fi-brands-linkedin">
+                        </i>
+                    </a>
+
                 </div>
                 
                 <button id="cv">
