@@ -3,7 +3,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: 'Operation Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -70,8 +70,14 @@ a:hover{
 
 @font-face {
   font-family: 'Unown';
-  src: url('Unown.ttf') format('ttf');
+  src: url('Unown.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 .unown-font {
   font-family: 'Unown', monospace;
 }
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');

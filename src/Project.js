@@ -23,9 +23,15 @@ function Project() {
                             <p>python</p>
                             <p>postgres</p>
                         </div>
+                        <div className="links">
+
                         <a href="https://github.com/Adote-um-Pet-Web">
                             {t("projetos.verMais")}
                         </a>
+                        <a href="https://github.com/A3-P">
+                            {t("projetos.verMaisPag")}
+                        </a>
+                        </div>
                     </div>
                 </li>
 
@@ -44,9 +50,14 @@ function Project() {
                             <p>python</p>
                             <p>postgres</p>
                         </div>
+                        <div className="links">
                         <a href="https://github.com/A3-P">
                             {t("projetos.verMais")}
                         </a>
+                        <a href="https://github.com/A3-P">
+                            {t("projetos.verMaisPag")}
+                        </a>
+                        </div>
                     </div>
                 </li>
 
@@ -63,9 +74,15 @@ function Project() {
                             <p>ruby</p>
                             <p>jekyll</p>
                         </div>
+                        <div className="links">
+
                         <a href="https://github.com/Andra-sun/Andra-sun.github.io">
                             {t("projetos.verMais")}
                         </a>
+                        <a href="https://github.com/Andra-sun/Andra-sun.github.io">
+                            {t("projetos.verMaisPag")}
+                        </a>
+                        </div>
                     </div>
                 </li>
             </ul>
