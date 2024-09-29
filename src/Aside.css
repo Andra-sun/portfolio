@@ -15,7 +15,7 @@ aside {
     flex-direction: column;
     justify-content: space-between;
 }
-#fixed select{
+#fixed select, #fixed button{
     border: 2px solid var(--main-color);
     margin: 5px;
     background-color: transparent;
@@ -24,6 +24,7 @@ aside {
     color: var(--main-color);
     width: 3.7rem;
 }
+
 #foto {
     border-radius: 12px;
     box-shadow: rgba(182, 182, 197, 0.2) 0px -2px 20px 7px;
@@ -105,9 +106,10 @@ aside {
     color: var(--main-color-hover);
     background-color: var(--bgc4);
 }
-#mais-infos a:hover .text-container p {
+#mais-infos a:hover .text-container p.letreiro {
     animation: letreiro 10s linear infinite;
 }
+
 @keyframes letreiro{
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
@@ -122,9 +124,8 @@ aside {
 
     width: 90%;
     border-radius: 6px;
-    padding: 15px;
+    padding: 10px 15px;
     margin-bottom: 1rem;
-    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 #redes{
     background-color: var(--bgc3);
@@ -135,9 +136,8 @@ aside {
     text-align: left;
     width: 90%;
     border-radius: 6px;
-    padding: 10px 15px;
+    padding: 0 15px;
     margin-bottom: 1rem;
-    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 #redes i{
     cursor: pointer;
@@ -154,8 +154,7 @@ aside {
     border-radius: 4px;
 }
 #cv {
-    width: 68%;
-    height: 4rem;
+    padding: 10px 20px ;
     border-radius: 0.8rem;
     margin-bottom: 0.5rem;
     font-size: 1.4rem;

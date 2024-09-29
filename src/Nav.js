@@ -1,13 +1,13 @@
+import { Link } from "react-router-dom";
 import './Nav.css';
 
-function Nav({ onNavClick }) {
+function Nav() {
     return (
         <nav className="Nav">
-            <a href="#" title="sobre mim" onClick={() => onNavClick('sobre')}><i className="fi fi-sr-user"></i></a>
-            <a href="#" title="esperiencia" onClick={() => onNavClick('Esperiencia')}><i className="fi fi-sr-brain"></i></a>
-            <a href="#" title="projetos" onClick={() => onNavClick('projetos')}><i className="fi fi-sr-apps"></i></a>
-            <a href="#" title="mensagem" onClick={() => onNavClick('mensagem')}><i className="fi fi-sr-paper-plane"></i></a>
-            <a href="#" title="adicionar" onClick={() => onNavClick('adicionar')}><i className="fi fi-sr-add"></i></a>
+            <Link to="/" title="sobre mim"><i className="fi fi-sr-user"></i></Link>
+            <Link to="/experiencia" title="experiência"><i className="fi fi-sr-brain"></i></Link>
+            <Link to="/projetos" title="projetos"><i className="fi fi-sr-apps"></i></Link>
+            <Link to="/mensagem" title="mensagem"><i className="fi fi-sr-paper-plane"></i></Link>
         </nav>
     );
 }

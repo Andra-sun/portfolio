@@ -1,42 +1,31 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import './Project.css';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import "./Project.css";
 
-const Project = () => {
-    const [projects, setProjects] = useState([]);
+function Project() {
+    const { t } = useTranslation('projects');
 
-    useEffect(() => {
-        const fetchProjects = async () => {
-            try {
-                const response = await axios.get('http://localhost:5000/projetos');
-                console.log('Projetos recebidos:', response.data);
-                setProjects(response.data);
-            } catch (error) {
-                console.error('Erro ao buscar projetos:', error);
-            }
-        };
-        fetchProjects();
-    }, []);
-    
     return (
         <div className="projetos">
             <ul>
-                {projects.map(project => (
-                    <li key={project.id}>
-                        <h2>{project.title}</h2>
-                        <p>{project.description}</p>
+                {/* book guardian */}
+                <li>
+                    <img src="https://github.com/A3-P/.github/raw/main/profile/images/mainPage.png" alt="Project Thumbnail" />
+                    <div className="textArea">
+                        <h2>Book Guardian</h2>
+                        <p>{t('projetos.bookGuadianDes')}</p>
                         <div className="technologies">
-                            {project.technologies.map((tech, index) => (
-                                <span key={index} className="tech">{tech}</span>
-                            ))}
+                            <p>javascrip</p>
+                            <p>django</p>
+                            <p>python</p>
+                            <p>postgres</p>
                         </div>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">Ver Projeto</a>
-                        {project.image && <img src={project.image} alt={project.title} />}
-                    </li>
-                ))}
+                        <a href="ttps://github.com/A3-P">{t('projetos.verMais')}</a>
+                    </div>
+                </li>
             </ul>
         </div>
     );
-};
+}
 
 export default Project;

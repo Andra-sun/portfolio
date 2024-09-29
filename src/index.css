@@ -16,6 +16,9 @@ body {
   align-items: center;
   background-color: var(--bgc2);
 
+  overflow: hidden;
+
+
 }
 #root{
   display: flex;
@@ -47,9 +50,11 @@ a:hover{
   --main-color: blueviolet;
   --main-color-hover: rgb(114, 42, 180);
   --fc: white;   
+  --fc2: rgb(207, 208, 209);
   --bgc: #000513; 
   --bgc2: #010118; 
-  --bgc3: #22202e;
+  --bgc3: #1d1c35;
+  /* --bgc3: #22202e; */
   --bgc4: #010218;
 }
 
