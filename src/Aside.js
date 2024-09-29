@@ -23,7 +23,7 @@ function Aside() {
         setIsMuted(!isMuted);
         const audioElement = document.getElementById("background-audio");
         if (audioElement) {
-            audioElement.muted = !audioElement.muted; // Muda o estado do áudio
+            audioElement.muted = !audioElement.muted;
         }
     };
 
@@ -32,6 +32,12 @@ function Aside() {
     const handleLanguageChange = (event) => {
         const selectedLanguage = event.target.value;
         i18n.changeLanguage(selectedLanguage);
+
+        if (selectedLanguage === 'unown'){
+            document.body.classList.add('unown-font');
+        }else{
+            document.body.classList.remove('unown-font');
+        }
     };
 
     // Letreiro
@@ -54,6 +60,7 @@ function Aside() {
                 <select onChange={handleLanguageChange}>
                     <option value="pt">pt</option>
                     <option value="en">en</option>
+                    <option value="unown">un</option>
                 </select>
                 {/* <select id="themeSwitcher" onChange={handleThemeChange}>
                     <option value="dark">{t("escuro")}</option>
@@ -116,6 +123,9 @@ function Aside() {
                         <i className="fi fi-sr-site"></i>
                     </a>
                 </div>
+                <button id="cv">
+                    <i className="fi fi-rs-download"></i> Download CV
+                </button>
             </div>
         </aside>
     );

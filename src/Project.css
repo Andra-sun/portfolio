@@ -6,6 +6,7 @@
 .projetos li img{
     width: 15rem;
     height: 10rem;
+    border-radius: 10px;
 }
 .projetos li{
     display: flex;
@@ -14,6 +15,7 @@
 }
 .projetos .textArea{
     margin-left: 1rem;
+    margin-right: .3rem;
     height: 100%;
 }
 .projetos li h2{

@@ -68,4 +68,10 @@ a:hover{
   --bgc4: #ececec; /* fundo da lista hover*/
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Operation+Mono:wght@400;700&display=swap');
+@font-face {
+  font-family: 'Unown';
+  src: url('Unown.ttf') format('ttf');
+}
+.unown-font {
+  font-family: 'Unown', monospace;
+}
