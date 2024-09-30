@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import "./App.css";
 import Nav from "./Nav";
 import Project from "./Project";
+import Knowledge from "./knowledge";
+
 
 function App() {
     const { t } = useTranslation();
@@ -14,6 +16,10 @@ function App() {
                 <div className="App">
                     <Routes>
                         <Route path="/" element={<h1>{t("sobreT")}</h1>} />
+                        <Route path="/conhecimento" element={<> 
+                            <h1>{t('conhecimento')}</h1> 
+                            <Knowledge /> 
+                        </>} />
                         <Route path="/projetos" element={
                             <>
                                 <h1>{t("projetosT")}</h1>

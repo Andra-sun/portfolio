@@ -47,13 +47,15 @@ a:hover{
 }
 
 :root {
-  --main-color: blueviolet;
-  --main-color-hover: rgb(114, 42, 180);
+  /* --main-color: blueviolet;
+  --main-color-hover: rgb(114, 42, 180); */
+  --main-color: #f2cb1d;
+  --main-color-hover: #aa901b;
   --fc: white;   
   --fc2: rgb(207, 208, 209);
   --bgc: #000513; 
   --bgc2: #010118; 
-  --bgc3: #1d1c35;
+  --bgc3: #0a081b;
   /* --bgc3: #22202e; */
   --bgc4: #010218;
 }
