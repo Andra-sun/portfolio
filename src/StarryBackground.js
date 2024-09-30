@@ -8,7 +8,7 @@ const StarryBackground = () => {
         const ctx = canvas.getContext('2d');
 
         const stars = [];
-        const numStars = 100; 
+        const numStars = 160; 
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;

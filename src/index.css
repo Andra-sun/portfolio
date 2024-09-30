@@ -49,13 +49,13 @@ a:hover{
 :root {
   /* --main-color: blueviolet;
   --main-color-hover: rgb(114, 42, 180); */
-  --main-color: #f2cb1d;
+  --main-color: #dcc401;
   --main-color-hover: #aa901b;
   --fc: white;   
   --fc2: rgb(207, 208, 209);
   --bgc: #000513; 
   --bgc2: #010118; 
-  --bgc3: #0a081b;
+  --bgc3: #363a59;
   /* --bgc3: #22202e; */
   --bgc4: #010218;
 }
@@ -69,6 +69,23 @@ a:hover{
   --bgc3: #ccc; /* fundo da lista*/
   --bgc4: #ececec; /* fundo da lista hover*/
 }
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+
+
 
 @font-face {
   font-family: 'Unown';
