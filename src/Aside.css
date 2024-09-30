@@ -5,17 +5,18 @@ aside {
     display: flex;
     flex-direction: column;
 }
-#fixed{
-    position:fixed;
+#fixed {
+    position: fixed;
     z-index: 99;
     margin: 1rem;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-#fixed select, #fixed button{
+#fixed select,
+#fixed button {
     border: 2px solid var(--main-color);
     margin: 5px;
     background-color: transparent;
@@ -23,9 +24,7 @@ aside {
     padding: 4px;
     color: var(--main-color);
     width: 2.7rem;
-
 }
-
 
 #foto {
     border-radius: 12px;
@@ -56,7 +55,7 @@ aside {
     box-shadow: rgba(182, 182, 197, 0.2) 0px 10px 20px 0px;
     background-color: var(--bgc);
 }
-#nomes{
+#nomes {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,13 +65,14 @@ aside {
     font-size: 1.4rem;
     color: var(--fc);
 }
-#nome, #apelido{
+#nome,
+#apelido {
     margin: 0;
 }
-#apelido{
+#apelido {
     font-size: 1.2rem;
 }
-#mais-infos a{
+#mais-infos a {
     width: 100%;
     display: block;
     overflow: hidden;
@@ -82,7 +82,7 @@ aside {
     font-size: 1.7rem;
     border-bottom: 2px solid var(--main-color-hover);
     background-color: var(--bgc);
-    
+
     height: auto;
     align-self: center;
     justify-content: left;
@@ -94,15 +94,15 @@ aside {
 }
 .text-container {
     overflow: hidden;
-    white-space: nowrap; 
-    position: relative; 
-    width: 100%; 
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
     margin-left: 1rem;
 }
 .text-container p {
     font-size: 1.4rem;
     font-weight: 500;
-    margin: 0; 
+    margin: 0;
 }
 #mais-infos i:hover {
     color: var(--main-color-hover);
@@ -112,9 +112,13 @@ aside {
     animation: letreiro 10s linear infinite;
 }
 
-@keyframes letreiro{
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+@keyframes letreiro {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 #mais-infos {
     background-color: var(--bgc3);
@@ -129,7 +133,7 @@ aside {
     padding: 10px 15px;
     margin-bottom: 1rem;
 }
-#redes{
+#redes {
     background-color: var(--bgc3);
     display: flex;
     flex-direction: row;
@@ -141,12 +145,12 @@ aside {
     padding: 0 15px;
     margin-bottom: 1rem;
 }
-#redes i{
+#redes i {
     cursor: pointer;
     font-size: 2rem;
     border-bottom: 2px solid var(--main-color-hover);
     background-color: var(--bgc);
-        
+
     height: auto;
     align-self: center;
     justify-content: left;
@@ -156,7 +160,7 @@ aside {
     border-radius: 4px;
 }
 #cv {
-    padding: 10px 20px ;
+    padding: 10px 20px;
     border-radius: 0.8rem;
     margin-bottom: 0.5rem;
     font-size: 1.4rem;
@@ -171,7 +175,100 @@ aside {
     margin-right: 10px;
     color: var(--fg);
 }
-#cv:hover{
+#cv:hover {
     background-color: var(--main-color-hover);
     transform: scale(1.09);
+}
+
+
+.Aside.open {
+    left: 0;
+}
+.menu-toggle{
+    display: none;
+}
+@media (max-width: 768px){
+
+    .menu-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hamburger {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+    }
+    
+    .hamburger span {
+        display: block;
+        height: 3px;
+        background-color: var(--main-color);
+        transition: all 0.3s ease;
+    }
+    
+    .hamburger span:nth-of-type(1) {
+        width: 100%;
+    }
+    
+    .hamburger span:nth-of-type(2) {
+        width: 80%;
+    }
+    
+    .hamburger span:nth-of-type(3) {
+        width: 60%;
+    }
+    
+    .hamburger.open span:nth-of-type(1) {
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        width: 100%;
+    }
+    
+    .hamburger.open span:nth-of-type(2) {
+        opacity: 0; 
+    }
+    
+    .hamburger.open span:nth-of-type(3) {
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 50%;
+        width: 100%;
+    }
+    
+
+
+
+
+    aside{
+        position: fixed;
+        left: -110%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        transition: left 0.3s ease;
+        z-index: 100;
+        background-color: var(--bgc);
+    }
+    #foto{
+        margin-top: 3rem;
+    }
+    #infoBar{
+        width: 98%;
+        height: 100%;
+        justify-content: space-around;
+    }
+
 }

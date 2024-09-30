@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "./Aside.css";
-import { useTranslation } from 'react-i18next';
+import App from "./App"
+import { useTranslation } from "react-i18next";
 
 function Aside() {
     // theme
-    const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState("dark");
     const handleThemeChange = (event) => {
         const selectedTheme = event.target.value;
         setTheme(selectedTheme);
 
-        if (selectedTheme === 'light') {
-            document.documentElement.classList.add('light-theme');
+        if (selectedTheme === "light") {
+            document.documentElement.classList.add("light-theme");
         } else {
-            document.documentElement.classList.remove('light-theme');
+            document.documentElement.classList.remove("light-theme");
         }
     };
 
@@ -33,30 +34,46 @@ function Aside() {
         const selectedLanguage = event.target.value;
         i18n.changeLanguage(selectedLanguage);
 
-        if (selectedLanguage === 'unown'){
-            document.body.classList.add('unown-font');
-        }else{
-            document.body.classList.remove('unown-font');
+        if (selectedLanguage === "unown") {
+            document.body.classList.add("unown-font");
+        } else {
+            document.body.classList.remove("unown-font");
         }
     };
 
     // Letreiro
     useEffect(() => {
-        const paragraphs = document.querySelectorAll('#mais-infos .text-container p');
-        paragraphs.forEach(p => {
+        const paragraphs = document.querySelectorAll(
+            "#mais-infos .text-container p"
+        );
+        paragraphs.forEach((p) => {
             if (p.textContent.length > 13) {
-                p.classList.add('letreiro');
+                p.classList.add("letreiro");
             }
         });
     }, []);
 
+    //menu mobile
+    const [menuOpen, setMenuOpen] = useState(false);
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
-        <aside className="Aside">
+        <aside className={`Aside ${menuOpen ? "open" : ""}`}>
             <audio id="background-audio" autoPlay loop>
                 <source src="/img/project/lofi.mp3" type="audio/mp3" />
                 Seu navegador não suporta o elemento de áudio.
             </audio>
             <div id="fixed">
+                <button className="menu-toggle" onClick={toggleMenu}>
+                    <div className={`hamburger ${menuOpen ? "open" : ""}`}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+
                 <select onChange={handleLanguageChange}>
                     <option value="pt">pt</option>
                     <option value="en">en</option>
@@ -66,7 +83,7 @@ function Aside() {
                     <option value="dark">{t("escuro")}</option>
                     <option value="light">{t("claro")}</option>
                 </select> */}
-                
+
                 <button id="muteButton" onClick={handleMuteToggle}>
                     {isMuted ? (
                         <i className="fi fi-sr-volume-mute"></i>

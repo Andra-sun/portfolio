@@ -46,9 +46,64 @@
 }
 
 
-
-
-
 .projetos {
     animation: fadeIn 1s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+    .projetos li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid var(--main-color);
+        border-radius: 0;
+    }
+    .projetos ul{
+        padding: 0;
+    }
+
+    .projetos li img {
+        width: 80%; 
+        height: auto;
+    }
+
+    .projetos .textArea {
+        margin: 0;
+        text-align: center; 
+    }
+
+    .projetos li h2 {
+        margin: 10px 0;
+        font-size: 1.5rem;
+    }
+
+    .projetos li p {
+        font-size: 0.85rem;
+        margin: 5px 0;
+        text-align: justify;
+    }
+
+    .technologies {
+        flex-wrap: wrap;
+    }
+    .technologies p{
+        margin: 5px 10px !important;
+    }
+
+
+    .links {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+    }
+
+    .links a {
+        margin: 5px 0;
+        font-size: 0.9rem;
+    }
 }

@@ -5,6 +5,7 @@ import Nav from "./Nav";
 import Project from "./Project";
 import Knowledge from "./Knowledge";
 
+
 function App() {
     const { t } = useTranslation();
 
