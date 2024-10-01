@@ -85,6 +85,30 @@ function Project() {
                         </div>
                     </div>
                 </li>
+
+                {/* Pixel Mart*/}
+                <li>
+                    <img
+                        src="https://github.com/wendellast/Pixel-Mart/blob/main/static/assets/img/icon.png?raw=true"
+                        alt="Project Thumbnail"
+                    />
+                    <div className="textArea">
+                        <h2>Pixel Mart</h2>
+                        <div className="technologies">
+                            <p>javascrip</p>
+                            <p>python</p>
+                        </div>
+                        <div className="links">
+
+                        <a href="https://github.com/wendellast/Pixel-Mart">
+                            {t("projetos.verMais")}
+                        </a>
+                        <a href="https://web-production-b8d4.up.railway.app/">
+                            {t("projetos.verMaisPag")}
+                        </a>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     );
