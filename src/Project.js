@@ -28,7 +28,7 @@ function Project() {
                         <a href="https://github.com/Adote-um-Pet-Web">
                             {t("projetos.verMais")}
                         </a>
-                        <a href="https://github.com/A3-P">
+                        <a href="https://adoteumpet.up.railway.app/">
                             {t("projetos.verMaisPag")}
                         </a>
                         </div>
@@ -54,7 +54,7 @@ function Project() {
                         <a href="https://github.com/A3-P">
                             {t("projetos.verMais")}
                         </a>
-                        <a href="https://github.com/A3-P">
+                        <a href="https://book-guardian-production.up.railway.app/">
                             {t("projetos.verMaisPag")}
                         </a>
                         </div>
@@ -79,7 +79,7 @@ function Project() {
                         <a href="https://github.com/Andra-sun/Andra-sun.github.io">
                             {t("projetos.verMais")}
                         </a>
-                        <a href="https://github.com/Andra-sun/Andra-sun.github.io">
+                        <a href="https://andra-sun.github.io/">
                             {t("projetos.verMaisPag")}
                         </a>
                         </div>

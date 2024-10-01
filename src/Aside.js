@@ -118,13 +118,14 @@ function Aside() {
                             </div>
                         </i>
                     </a>
-                    <a href="#">
+                    <a href="mailto:camileguimaraes463@gmail.com">
                         <i className="fi fi-sr-envelope">
                             <div className="text-container">
                                 <p>camileguimaraes463@gmail.com</p>
                             </div>
                         </i>
                     </a>
+
                 </div>
                 <div id="redes">
                     <a href="#">
