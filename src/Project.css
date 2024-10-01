@@ -53,20 +53,20 @@
 
 @media (max-width: 768px) {
     .projetos li {
-        display: flex;
+/*         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-bottom: 2rem;
+        align-items: center; */
+        /* margin-bottom: 2rem;
         border-bottom: 1px solid var(--main-color);
-        border-radius: 0;
+        border-radius: 0; */
     }
     .projetos ul{
         padding: 0;
     }
 
     .projetos li img {
-        width: 80%; 
-        height: auto;
+        width: 60%; 
+        align-self: center;
     }
 
     .projetos .textArea {
@@ -84,6 +84,9 @@
         margin: 5px 0;
         text-align: justify;
     }
+    .projetos li p:nth-of-type(1){
+        display: none;
+    }
 
     .technologies {
         flex-wrap: wrap;
@@ -98,7 +101,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 25px;
 
     }
 
