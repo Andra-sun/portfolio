@@ -16,7 +16,8 @@ body {
   align-items: center;
   background-color: var(--bgc2);
 
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 
 
 }
