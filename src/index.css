@@ -16,10 +16,7 @@ body {
   align-items: center;
   background-color: var(--bgc2);
 
-  overflow-x: hidden;
-  overflow-y: auto;
-
-
+  overflow: hidden;
 }
 #root{
   display: flex;
