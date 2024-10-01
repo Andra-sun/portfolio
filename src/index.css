@@ -47,6 +47,13 @@ a:hover{
   transform: scale(1.09);
 }
 
+@media (max-width: 768px) {
+  body {
+    max-height: 90vh;
+  } /* teste diminuindo um pouco */
+
+}
+
 :root {
   /* --main-color: blueviolet;
   --main-color-hover: rgb(114, 42, 180); */
