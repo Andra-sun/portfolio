@@ -18,15 +18,15 @@ function Aside() {
     };
 
     // Mutar/Desmutar
-    const [isMuted, setIsMuted] = useState(false);
+    // const [isMuted, setIsMuted] = useState(false);
 
-    const handleMuteToggle = () => {
-        setIsMuted(!isMuted);
-        const audioElement = document.getElementById("background-audio");
-        if (audioElement) {
-            audioElement.muted = !audioElement.muted;
-        }
-    };
+    // const handleMuteToggle = () => {
+    //     setIsMuted(!isMuted);
+    //     const audioElement = document.getElementById("background-audio");
+    //     if (audioElement) {
+    //         audioElement.muted = !audioElement.muted;
+    //     }
+    // };
 
     // locale
     const { t, i18n } = useTranslation();
@@ -61,10 +61,10 @@ function Aside() {
 
     return (
         <aside className={`Aside ${menuOpen ? "open" : ""}`}>
-            <audio id="background-audio" autoPlay loop>
+            {/* <audio id="background-audio" autoPlay loop>
                 <source src="/img/project/lofi.mp3" type="audio/mp3" />
                 Seu navegador não suporta o elemento de áudio.
-            </audio>
+            </audio> */}
             <div id="fixed">
                 <button className="menu-toggle" onClick={toggleMenu}>
                     <div className={`hamburger ${menuOpen ? "open" : ""}`}>
@@ -84,13 +84,13 @@ function Aside() {
                     <option value="light">{t("claro")}</option>
                 </select> */}
 
-                <button id="muteButton" onClick={handleMuteToggle}>
+               {/* <button id="muteButton" onClick={handleMuteToggle}>
                     {isMuted ? (
                         <i className="fi fi-sr-volume-mute"></i>
                     ) : (
                         <i className="fi fi-sr-volume"></i>
                     )}
-                </button>
+                </button> */}
             </div>
             <div id="foto">
                 <img
