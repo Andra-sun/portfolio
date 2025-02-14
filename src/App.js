@@ -4,6 +4,7 @@ import "./App.css";
 import Nav from "./Nav";
 import Project from "./Project";
 import Knowledge from "./Knowledge";
+import Diploma from "./Diploma";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
                             path="/mensagem"
                             element={<h1>{t("mensagemT")}</h1>}
                         />
+                        <Route path='/certificado' element={<><h1>Certificados</h1><Diploma/></>} />
                     </Routes>
                 </div>
             </div>
