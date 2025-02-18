@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
 import "./Aside.css";
-import App from "./App"
+// import App from "./App"
 import { useTranslation } from "react-i18next";
 
 function Aside() {
     // theme
-    const [theme, setTheme] = useState("dark");
-    const handleThemeChange = (event) => {
-        const selectedTheme = event.target.value;
-        setTheme(selectedTheme);
+    // const [theme, setTheme] = useState("dark");
+    // const handleThemeChange = (event) => {
+    //     const selectedTheme = event.target.value;
+    //     setTheme(selectedTheme);
 
-        if (selectedTheme === "light") {
-            document.documentElement.classList.add("light-theme");
-        } else {
-            document.documentElement.classList.remove("light-theme");
-        }
-    };
+    //     if (selectedTheme === "light") {
+    //         document.documentElement.classList.add("light-theme");
+    //     } else {
+    //         document.documentElement.classList.remove("light-theme");
+    //     }
+    // };
 
     // Mutar/Desmutar
     // const [isMuted, setIsMuted] = useState(false);

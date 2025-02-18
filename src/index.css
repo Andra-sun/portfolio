@@ -52,8 +52,6 @@ a:hover{
 }
 
 :root {
-  /* --main-color: blueviolet;
-  --main-color-hover: rgb(114, 42, 180); */
   --main-color: #dcc401;
   --main-color-hover: #aa901b;
   --fc: white;   
@@ -61,19 +59,19 @@ a:hover{
   --bgc: #000513; 
   --bgc2: #010118; 
   --bgc3: #363a59;
-  /* --bgc3: #22202e; */
   --bgc4: #010218;
 }
-
-.light-theme {
-  --main-color: rgb(71, 204, 82);
-  --main-color-hover: rgb(63, 167, 72);
-  --bgc: #fff;  /* fundo do card*/
-  --fc: #000;   /* cor da fonte*/
-  --bgc2: #dddddd; /* fundo do html*/
-  --bgc3: #ccc; /* fundo da lista*/
-  --bgc4: #ececec; /* fundo da lista hover*/
-}
+/* 
+  .light-theme {
+    --main-color: rgb(71, 204, 82);
+    --main-color-hover: rgb(63, 167, 72);
+    --bgc: #fff;  /* fundo do card*/
+/*    --fc: #000;   /* cor da fonte*/
+  /*  --bgc2: #dddddd; /*fundo do html*/
+   /* --bgc3: #ccc; /*fundo da lista*/
+   /* --bgc4: #ececec; /*fundo da lista hover*/
+ /* } 
+*/
 
 
 @keyframes fadeIn {
@@ -101,7 +99,3 @@ a:hover{
 .unown-font {
   font-family: 'Unown', monospace;
 }
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');

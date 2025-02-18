@@ -1,33 +1,15 @@
 import React, { useState } from "react";
-import { Document, Page, pdfjs } from "react-pdf";
-// import './Diploma.css';
-
-pdfjs.GlobalWorkerOptions.workerSrc =
-    "//cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js";
-
+import { pdfjs } from "react-pdf";
+import PdfComp from "./PdfComp";
+import "./Diploma.css";
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 function Diploma() {
-    const [numPages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1);
-
-    function onDocumentLoadSuccess({ numPages }) {
-        setNumPages(numPages);
-    }
 
     return (
         <div className="Diploma">
-            <div className="pdfImgContainer">
-                <div className="pdfImg">
-                    <Document
-                        file="/img/pdf/programacaoDeSolucoesComputacionais.pdf"
-                        onLoadSuccess={onDocumentLoadSuccess}
-                    >
-                        <Page pageNumber={pageNumber} />
-                    </Document>
-                    <p>
-                        Page {pageNumber} of {numPages}
-                    </p>
-                </div>
-            </div>
+            <PdfComp file="ambientesComputacionaisEConectividade.pdf" />
+            <PdfComp file="sistemasComputacionaisESegurança.pdf" />
+            <PdfComp file="solucoesComputacionais.pdf" />
         </div>
     );
 }
