@@ -35,11 +35,11 @@ function App() {
                                 </>
                             }
                         />
-                        <Route
+                        {/* <Route
                             path="/mensagem"
                             element={<h1>{t("mensagemT")}</h1>}
-                        />
-                        <Route path='/certificado' element={<><h1>Certificados</h1><Diploma/></>} />
+                        /> */}
+                        <Route path='/certificado' element={<><h1>{t("certificadoT")}</h1><Diploma/></>} />
                     </Routes>
                 </div>
             </div>
