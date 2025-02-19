@@ -1,41 +1,67 @@
-import {useEffect, useState} from 'react';
-import {Document, Page} from 'react-pdf';
-function PdfComp({file}) {
-	const [numPages, setNumPages] = useState();
-	const [pageNumber, setPageNumber] = useState(1);
-	function onDocumentLoadSuccess({numPages}){
-		setNumPages(numPages);
-	}
-	const [pdfFile, setPdfFile] = useState(null);
-	useEffect(() => {
-		if (file) {
-		  import(`./pdf/${file}`).then((pdf) => {
-			setPdfFile(pdf.default);
-		  }).catch((error) => {
-			console.error("Erro ao carregar o PDF:", error);
-		  });
-		}
-	}, [file]);
-	const pdfName = file ? file.replace('.pdf', ' ').replace(/([A-Z])/g, ' $1').trim(): ' ';
-	const [isFullScreen, setFullScreen] = useState(false);
-	const toggleFullScreen = () => {
-		setFullScreen((prev) => !prev);
-	};
-	return(
-		<div >
-			{pdfFile ? (
-				<>
-				{isFullScreen && <button onClick={toggleFullScreen}>x</button>}
-			<Document file={pdfFile} onLoadSuccess={onDocumentLoadSuccess} className={isFullScreen ? 'fullScreenContainer' : 'pdfImageContainer'} onClick={toggleFullScreen} >
-				<p>{pdfName} </p>
-				<Page pageNumber={1}  renderTextLayer={false} renderAnnotationLayer={false} className='pdfImg'/>
-				<Page pageNumber={2}  renderTextLayer={false} renderAnnotationLayer={false} className='pdfImg'/>
-			</Document>
-				</>
-			) : (
-				<p>Carregando pdf...</p>
-			)}
-		</div>
-	);
+import { useEffect, useState } from "react";
+import { Document, Page } from "react-pdf";
+function PdfComp({ file }) {
+    const [numPages, setNumPages] = useState(null);
+    const [pdfFile, setPdfFile] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    function onDocumentLoadSuccess({ numPages }) {
+        setNumPages(numPages);
+    }
+    useEffect(() => {
+        if (file) {
+            import(`./pdf/${file}`)
+                .then((pdf) => {
+                    setPdfFile(pdf.default);
+                    setError(null);
+                })
+                .catch((err) => {
+                    console.error("erro pra carregar o pdf: ", err);
+                    setError("erro pra carregar o pdf! ");
+                })
+                .finally(() => {
+                    setLoading(false);
+                });
+        }
+    }, [file]);
+    const pdfName = file
+        ? file
+              .replace(".pdf", " ")
+              .replace(/([A-Z])/g, " $1")
+              .trim()
+        : " ";
+    const openPdfNewTab = () => {
+        if (pdfFile) {
+            window.open(pdfFile, "_blank");
+        }
+    };
+
+    return (
+        <div>
+            {loading && <p>carregando pdf...</p>}
+            {error && <p style={{ color: "red" }}>{error}</p>}
+            {pdfFile && (
+                <>
+                    <Document
+                        file={pdfFile}
+                        onLoadSuccess={onDocumentLoadSuccess}
+                        className="pdfImageContainer"
+                        onClick={openPdfNewTab}
+                    >
+                        <p>{pdfName} </p>
+                        {Array.from(new Array(numPages), (el, index) => (
+                            <Page
+                                key={`page_${index + 1}`}
+                                pageNumber={index + 1}
+                                renderTextLayer={false}
+                                renderAnnotationLayer={false}
+                                className="pdfImg"
+                            />
+                        ))}
+                    </Document>
+                </>
+            )}
+        </div>
+    );
 }
 export default PdfComp;

@@ -7,9 +7,12 @@ function Diploma() {
 
     return (
         <div className="Diploma">
+            <ul>
             <PdfComp file="ambientesComputacionaisEConectividade.pdf" />
             <PdfComp file="sistemasComputacionaisESegurança.pdf" />
-            <PdfComp file="solucoesComputacionais.pdf" />
+            <PdfComp file="programaçãoDeSoluçõesComputacionais.pdf" />
+            <PdfComp file="modelagemDeSoftware.pdf" />
+            </ul>
         </div>
     );
 }
