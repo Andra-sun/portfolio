@@ -12,6 +12,8 @@ function Diploma() {
             <PdfComp file="sistemasComputacionaisESegurança.pdf" />
             <PdfComp file="programaçãoDeSoluçõesComputacionais.pdf" />
             <PdfComp file="modelagemDeSoftware.pdf" />
+	    <PdfComp file="oracleDatabaseDesigne.pdf" />
+	    <PdfComp file="OracleProgramacaoEmJava.pdf" />
             </ul>
         </div>
     );
