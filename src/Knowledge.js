@@ -85,6 +85,10 @@ function Knowledge() {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg" alt="eclipse"/>
                             eclipse
                         </div>
+			<div>
+				<img src="https://hurbad.com/wp-content/uploads/2021/12/Cisco-Packet-Tracer.png" alt="cisco"  />
+				Cisco PT
+			</div>
                     </div>
                 </li>
             </ul>

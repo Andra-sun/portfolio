@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./App.css";
+import About from "./About";
 import Nav from "./Nav";
 import Project from "./Project";
 import Knowledge from "./Knowledge";
@@ -16,7 +17,7 @@ function App() {
                 <Nav />
                 <div className="App">
                     <Routes>
-                        <Route path="/" element={<h1>{t("sobreT")}</h1>} />
+                        <Route path="/" element={ <> <h1>{t("sobreT")}</h1> <About /> </>} />
                         <Route
                             path="/experiencia"
                             element={
