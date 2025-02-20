@@ -1,21 +1,18 @@
-import './About.css';
-function About(){
+import React from "react";
+import { useTranslation } from "react-i18next";
+import "./About.css";
+
+function About() {
+    const { t } = useTranslation("about");
+
     return (
         <div>
-            <h1>Olá! Meu nome é<strong> Camile</strong>.</h1>
-            <p>
-                Sou desenvolvedora com foco em <strong>Front-end</strong>, com experiência na criação de aplicações web. 
-                A linguagem que mais utilizo é <strong>JavaScript</strong>.
-            </p>
-            <p>
-                Minha paixão é estar sempre aprendendo coisas novas. Além do JavaScript, já estudei e testei várias outras 
-                linguagens e ferramentas na área de tecnologia, como o <strong>Cisco Packet Tracer</strong> para redes e o 
-                <strong> Godot</strong> para desenvolvimento de jogos.
-            </p>
-            <p>Navegue pelo meu portfólio para conhecer um pouco dos meus projetos!</p>
+            <h1 dangerouslySetInnerHTML={{ __html: t("saudacao") }} />
+            <p dangerouslySetInnerHTML={{ __html: t("descricao1") }} />
+            <p dangerouslySetInnerHTML={{ __html: t("descricao2") }} />
+            <p>{t("convite")}</p>
         </div>
     );
-
 }
 
 export default About;

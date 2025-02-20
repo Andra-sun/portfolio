@@ -4,19 +4,23 @@ import translationEN from './locales/en/translation.json';
 import translationPT from './locales/pt/translation.json';
 import projetosEN from './locales/en/projects/projetos.json';
 import projetosPT from './locales/pt/projects/projetos.json';
+import aboutPT from './locales/pt/about/about.json';
+import aboutEN from './locales/en/about/about.json';
 
 const resources = {
   en: {
     translation: translationEN,
     projects: {
       projetos: projetosEN
-    }
+    },
+    about: aboutEN
   },
   pt: {
     translation: translationPT,
     projects: {
       projetos: projetosPT
-    }
+    },
+    about: aboutPT
   }
 };
 
