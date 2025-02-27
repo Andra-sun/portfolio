@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './static/css/index.css';
 import App from './App';
-import Aside from './Aside';
+import Aside from './components/Aside';
 import './i18n';
 import reportWebVitals from './reportWebVitals';
 import StarryBackground from './StarryBackground';

@@ -92,7 +92,7 @@ a:hover{
 
 @font-face {
   font-family: 'Unown';
-  src: url('Unown.ttf') format('truetype');
+  src: url('../font/Unown.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

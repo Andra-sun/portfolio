@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import "./App.css";
-import About from "./About";
-import Nav from "./Nav";
-import Project from "./Project";
-import Knowledge from "./Knowledge";
-import Diploma from "./Diploma";
+import "./static/css/App.css";
+import About from "./pages/About";
+import Nav from "./components/Nav";
+import Project from "./pages/Project";
+import Knowledge from "./pages/Knowledge";
+import Diploma from "./pages/Diploma";
 
 
 function App() {

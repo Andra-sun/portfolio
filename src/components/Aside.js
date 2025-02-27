@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Aside.css";
+import "../static/css/Aside.css";
 // import App from "./App"
 import { useTranslation } from "react-i18next";
 
@@ -58,6 +58,14 @@ function Aside() {
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
+
+    //download
+    const downloadCV = () => {
+        const link = document.createElement("a");
+        link.href = "cv_27022025.pdf";
+        link.download = "CamileCV.pdf";
+        link.click();
+    }
 
     return (
         <aside className={`Aside ${menuOpen ? "open" : ""}`}>
@@ -118,30 +126,30 @@ function Aside() {
                             </div>
                         </i>
                     </a>
-                    <a href="mailto:camileguimaraes463@gmail.com">
+                    <a href="mailto:camilea_guimaraes@outlook.com">
                         <i className="fi fi-sr-envelope">
                             <div className="text-container">
-                                <p>camileguimaraes463@gmail.com</p>
+                                <p>camilea_guimaraes@outlook.com</p>
                             </div>
                         </i>
                     </a>
 
                 </div>
                 <div id="redes">
-                    <a href="#">
+                    {/* <a href="#">
                         <i className="fi fi-brands-instagram"></i>
-                    </a>
+                    </a> */}
                     <a href="https://github.com/Andra-sun">
                         <i className="fi fi-brands-github"></i>
                     </a>
-                    <a href="#">
+                    <a href="https://linkedin.com/in/camile-andrade-guimaraes">
                         <i className="fi fi-brands-linkedin"></i>
                     </a>
                     <a href="https://Andra-sun.github.io">
                         <i className="fi fi-sr-site"></i>
                     </a>
                 </div>
-                <button id="cv">
+                <button id="cv" onClick={downloadCV}>
                     <i className="fi fi-rs-download"></i> Download CV
                 </button>
             </div>
