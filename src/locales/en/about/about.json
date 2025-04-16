@@ -1,6 +1,7 @@
 {
-    "saudacao": "Hello! My name is <strong>Camile</strong>.",
-    "descricao1": "I am a developer focused on <strong>Front-end</strong>, with experience in creating web applications. The language I use the most is <strong>JavaScript</strong>.",
-    "descricao2": "My passion is always learning new things. In addition to JavaScript, I have studied and tested several other languages and tools in the technology field, such as <strong>Cisco Packet Tracer</strong> for networking and <strong>Godot</strong> for game development.",
-    "convite": "Browse my portfolio to check out some of my projects!"
-}
+    "saudacao": "Hello, nice to meet you! I'm <strong>Camile</strong>.",
+    "descricao1": "I'm a developer with a focus on <strong>Front-end</strong>, passionate about creating creative, functional interfaces with a touch of personality. My primary tool is <strong>JavaScript</strong>, but I'm always exploring new tools and programming languages.",
+    "descricao2": "I enjoy exploring the full range of possibilities in technology — I've ventured into networks with <strong>Cisco Packet Tracer</strong>, experimented with <strong>Godot</strong> for game development, and I don't plan on stopping anytime soon. What I truly enjoy is learning by doing.",
+    "convite": "Feel free to explore my portfolio!"
+  }
+  

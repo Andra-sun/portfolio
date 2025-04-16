@@ -32,17 +32,18 @@
     overflow-x: auto;
     display: flex;
     flex-direction: row;
+    gap: 10px;
 }
 .technologies p{
     padding: 7px 15px;
-    margin: 0 10px !important;
     font-size: .8rem !important;
     background-color: rgba(111, 0, 255, 0.158);
     border-radius: 12px;
     cursor: default;
 }
-.links a:nth-of-type(2) {
-    margin-left: 30px;
+.links {
+   gap: 30px;
+   display: flex;
 }
 
 
@@ -52,60 +53,52 @@
 
 
 @media (max-width: 768px) {
-    /* .projetos li {
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        margin-bottom: 2rem;
-        border-bottom: 1px solid var(--main-color);
-        border-radius: 0; 
-    } */
+    .projetos{
+        overflow-x: hidden;
+    }
     .projetos ul{
         padding: 0;
+        overflow-x: hidden;
+        width: 100%;
+        display: block;
     }
-
     .projetos li img {
-        width: 60%; 
         align-self: center;
+        max-width: 35%;
     }
 
     .projetos .textArea {
+        max-width: 65%;
         margin: 0;
-        text-align: center; 
+    }
+    .projetos .technologies{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
 
-    .projetos li h2 {
-        margin: 10px 0;
-        font-size: 1.5rem;
-    }
-
-    .projetos li p {
-        font-size: 0.85rem;
-        margin: 5px 0;
-        text-align: justify;
-    }
     .projetos li p:nth-of-type(1){
+        text-wrap: normal;
+    }
+
+}
+@media (max-width: 420px) {
+    .projetos li img{
         display: none;
     }
-
-    .technologies {
-        flex-wrap: wrap;
+    .projetos li{
+        flex-direction: column;
+        width: 100%;
     }
-    .technologies p{
-        margin: 5px 10px !important;
+    .projetos .textArea{
+        max-width: 100% !important;
     }
-
-
+    .projetos .textArea p:nth-of-type(0){
+        width: 100%;
+    }
     .links {
-        margin-top: 1rem;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-    }
-
-    .links a {
-        margin: 5px 0;
-        font-size: 0.9rem;
-    }
+        justify-content: center;
+     }
 }

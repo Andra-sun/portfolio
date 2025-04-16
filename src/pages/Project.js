@@ -1,114 +1,60 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import "../static/css/Project.css";
+import Card from "../elements/cardProject";
 
 function Project() {
     const { t } = useTranslation("projects");
+    const cards = [
+        {
+          name: "Adote um pet",
+          image: "https://avatars.githubusercontent.com/u/148292923?s=200&v=4",
+          description: t("projetos.adotDes"),
+          linguage: ["javascript", "django", "python"],
+          link1: "https://github.com/Adote-um-Pet-Web",
+          link2: "https://adoteumpet.up.railway.app/",
+        },
+        {
+          name: "Book Guardian",
+          image: "https://avatars.githubusercontent.com/u/167376146?s=200&v=4",
+          description: t("projetos.bookGuadianDes"),
+          linguage: ["javascript", "django", "python"],
+          link1: "https://github.com/A3-P",
+          link2: "https://book-guardian-production.up.railway.app/",
+        },
+        {
+          name: "Shark",
+          image: "https://andra-sun.github.io/assets/img/favicons/web-app-manifest-512x512.png",
+          description: t("projetos.sharkDes"),
+          linguage: ["ruby", "jekyll"],
+          link1: "https://github.com/Andra-sun/Andra-sun.github.io",
+          link2: "https://andra-sun.github.io/",
+        },
+        {
+          name: "Pixel Mart",
+          image: "https://github.com/wendellast/Pixel-Mart/blob/main/static/assets/img/icon.png?raw=true",
+          description: t("projetos.pixelDes"),
+          linguage: ["javascript", "python"],
+          link1: "https://github.com/wendellast/Pixel-Mart",
+          link2: "https://web-production-b8d4.up.railway.app/",
+        },
+      ];
+      
 
     return (
         <div className="projetos">
             <ul>
-                {/* Adote um pet */}
-                <li>
-                    <img
-                        src="https://avatars.githubusercontent.com/u/148292923?s=200&v=4"
-                        alt="Project Thumbnail"
+                {cards.map((card, index) => (
+                    <Card
+                        key={index}
+                        image={card.image}
+                        name={card.name}
+                        description={card.description}
+                        linguage={card.linguage}
+                        link1={card.link1}
+                        link2={card.link2}
                     />
-                    <div className="textArea">
-                        <h2>Adote um pet</h2>
-                        <p>{t("projetos.adotDes")}</p>
-                        <div className="technologies">
-                            <p>javascrip</p>
-                            <p>django</p>
-                            <p>python</p>
-                            <p>postgres</p>
-                        </div>
-                        <div className="links">
-
-                        <a href="https://github.com/Adote-um-Pet-Web">
-                            {t("projetos.verMais")}
-                        </a>
-                        <a href="https://adoteumpet.up.railway.app/">
-                            {t("projetos.verMaisPag")}
-                        </a>
-                        </div>
-                    </div>
-                </li>
-
-                {/* book guardian */}
-                <li>
-                    <img
-                        src="https://avatars.githubusercontent.com/u/167376146?s=200&v=4"
-                        alt="Project Thumbnail"
-                    />
-                    <div className="textArea">
-                        <h2>Book Guardian</h2>
-                        <p>{t("projetos.bookGuadianDes")}</p>
-                        <div className="technologies">
-                            <p>javascrip</p>
-                            <p>django</p>
-                            <p>python</p>
-                            <p>postgres</p>
-                        </div>
-                        <div className="links">
-                        <a href="https://github.com/A3-P">
-                            {t("projetos.verMais")}
-                        </a>
-                        <a href="https://book-guardian-production.up.railway.app/">
-                            {t("projetos.verMaisPag")}
-                        </a>
-                        </div>
-                    </div>
-                </li>
-
-                {/* Shark blog */}
-                <li>
-                    <img
-                        src="https://cdn-icons-png.freepik.com/512/3127/3127600.png"
-                        alt="Project Thumbnail"
-                    />
-                    <div className="textArea">
-                        <h2>Shark</h2>
-                        <p>{t("projetos.sharkDes")}</p>
-                        <div className="technologies">
-                            <p>ruby</p>
-                            <p>jekyll</p>
-                        </div>
-                        <div className="links">
-
-                        <a href="https://github.com/Andra-sun/Andra-sun.github.io">
-                            {t("projetos.verMais")}
-                        </a>
-                        <a href="https://andra-sun.github.io/">
-                            {t("projetos.verMaisPag")}
-                        </a>
-                        </div>
-                    </div>
-                </li>
-
-                {/* Pixel Mart*/}
-                <li>
-                    <img
-                        src="https://github.com/wendellast/Pixel-Mart/blob/main/static/assets/img/icon.png?raw=true"
-                        alt="Project Thumbnail"
-                    />
-                    <div className="textArea">
-                        <h2>Pixel Mart</h2>
-                        <div className="technologies">
-                            <p>javascrip</p>
-                            <p>python</p>
-                        </div>
-                        <div className="links">
-
-                        <a href="https://github.com/wendellast/Pixel-Mart">
-                            {t("projetos.verMais")}
-                        </a>
-                        <a href="https://web-production-b8d4.up.railway.app/">
-                            {t("projetos.verMaisPag")}
-                        </a>
-                        </div>
-                    </div>
-                </li>
+                ))}
             </ul>
         </div>
     );

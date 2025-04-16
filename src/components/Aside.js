@@ -1,35 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "../static/css/Aside.css";
-// import App from "./App"
 import { useTranslation } from "react-i18next";
 
 function Aside() {
-    // theme
-    // const [theme, setTheme] = useState("dark");
-    // const handleThemeChange = (event) => {
-    //     const selectedTheme = event.target.value;
-    //     setTheme(selectedTheme);
-
-    //     if (selectedTheme === "light") {
-    //         document.documentElement.classList.add("light-theme");
-    //     } else {
-    //         document.documentElement.classList.remove("light-theme");
-    //     }
-    // };
-
-    // Mutar/Desmutar
-    // const [isMuted, setIsMuted] = useState(false);
-
-    // const handleMuteToggle = () => {
-    //     setIsMuted(!isMuted);
-    //     const audioElement = document.getElementById("background-audio");
-    //     if (audioElement) {
-    //         audioElement.muted = !audioElement.muted;
-    //     }
-    // };
-
     // locale
-    const { t, i18n } = useTranslation();
+    const {  i18n } = useTranslation();
     const handleLanguageChange = (event) => {
         const selectedLanguage = event.target.value;
         i18n.changeLanguage(selectedLanguage);
@@ -69,10 +44,6 @@ function Aside() {
 
     return (
         <aside className={`Aside ${menuOpen ? "open" : ""}`}>
-            {/* <audio id="background-audio" autoPlay loop>
-                <source src="/img/project/lofi.mp3" type="audio/mp3" />
-                Seu navegador não suporta o elemento de áudio.
-            </audio> */}
             <div id="fixed">
                 <button className="menu-toggle" onClick={toggleMenu}>
                     <div className={`hamburger ${menuOpen ? "open" : ""}`}>
@@ -87,18 +58,6 @@ function Aside() {
                     <option value="en">en</option>
                     <option value="unown">un</option>
                 </select>
-                {/* <select id="themeSwitcher" onChange={handleThemeChange}>
-                    <option value="dark">{t("escuro")}</option>
-                    <option value="light">{t("claro")}</option>
-                </select> */}
-
-               {/* <button id="muteButton" onClick={handleMuteToggle}>
-                    {isMuted ? (
-                        <i className="fi fi-sr-volume-mute"></i>
-                    ) : (
-                        <i className="fi fi-sr-volume"></i>
-                    )}
-                </button> */}
             </div>
             <div id="foto">
                 <img
@@ -119,7 +78,7 @@ function Aside() {
                             </div>
                         </i>
                     </a>
-                    <a href="#">
+                    <a href="https://www.google.com/maps/place/Guanambi+-+BA/@-14.1890625,-43.1547377,10z/data=!3m1!4b1!4m6!3m5!1s0x75ac2d5ea46c245:0xdbbd134623c62738!8m2!3d-14.2193421!4d-42.7796873!16s%2Fm%2F04lghl4?entry=ttu&g_ep=EgoyMDI1MDQxMy4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D">
                         <i className="fi fi-sr-map-marker">
                             <div className="text-container">
                                 <p>Guanambi-BA</p>
