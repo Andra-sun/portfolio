@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { pdfjs } from "react-pdf";
-import PdfComp from "../PdfComp";
+import PdfComp from "../elements/PdfComp";
 import "../static/css/Diploma.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 function Diploma() {
