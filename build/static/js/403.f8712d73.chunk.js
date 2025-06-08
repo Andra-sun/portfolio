@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[403],{403:(e,a,s)=>{e.exports=s.p+"static/media/oracleDatabaseDesigne.b3fc8a781b988669e9a0.pdf"}}]);

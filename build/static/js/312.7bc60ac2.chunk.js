@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[312],{312:(e,f,o)=>{e.exports=o.p+"static/media/modelagemDeSoftware.dfea8255ff87e987ef47.pdf"}}]);

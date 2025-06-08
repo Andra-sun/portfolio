@@ -1,0 +1,48 @@
+// Importando arquivos parciais
+@import 'variables';
+@import 'mixins';
+
+// Reset básico
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Estilos globais
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $secondary-color;
+}
+
+// Container responsivo
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+
+  @include respond-to(sm) {
+    padding: 0 $spacing-lg;
+  }
+}
+
+// Botão padrão
+.btn {
+  @include flex(row, center, center);
+  padding: $spacing-sm $spacing-md;
+  border: none;
+  border-radius: 4px;
+  background-color: $primary-color;
+  color: white;
+  cursor: pointer;
+  @include transition;
+  @include box-shadow(1);
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    @include box-shadow(2);
+  }
+} 
