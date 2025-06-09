@@ -30,21 +30,18 @@ function Aside() {
             document.body.classList.remove("unown-font");
         }
 
-        // Rastrear mudança de idioma
         trackLanguageChange(currentLanguage, selectedLanguage);
     };
 
     const downloadCV = () => {
         const link = document.createElement("a");
-        link.href = "cv_27022025.pdf";
+        link.href = "curriculo.pdf";
         link.download = "CamileCV.pdf";
         link.click();
 
-        // Rastrear download do CV
         trackDownload("CamileCV.pdf", "pdf");
     };
 
-    // Handler para links sociais
     const handleSocialClick = (platform, url) => {
         trackClick(platform, "social-link", url);
     };
