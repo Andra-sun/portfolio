@@ -1,0 +1,112 @@
+/* Estrelas de fundo (grandes e lentas) */
+.stars-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.star-bg {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: twinkleSlow 4s infinite;
+}
+
+/* Estrelas de frente (pequenas e rápidas) */
+.stars-foreground {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.star-fg {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: twinkleFast 2s infinite;
+}
+
+/* Estrela cadente */
+.shooting-star {
+    position: absolute;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 2px var(--main-color));
+    animation: shoot 3s linear infinite;
+    opacity: 0;
+}
+
+.shooting-star::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), transparent);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+.shooting-star::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 4px;
+    height: 1px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 6px var(--main-color);
+}
+
+/* Animações */
+@keyframes twinkleSlow {
+    0%,
+    100% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes twinkleFast {
+    0%,
+    100% {
+        opacity: 0.05;
+    }
+    50% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes shoot {
+    0% {
+        transform: translate(0, 0) rotate(-45deg);
+        opacity: 0.6;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    70% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translate(180vh, -180vh) rotate(-45deg);
+        opacity: 0;
+    }
+}

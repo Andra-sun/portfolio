@@ -8,7 +8,7 @@ const StarryBackground = () => {
         const ctx = canvas.getContext('2d');
 
         const stars = [];
-        const numStars = 170; 
+        const numStars = 200; 
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -58,7 +58,7 @@ const StarryBackground = () => {
         };
     }, []);
 
-    return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -1 }} />;
+    return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -1, width: '100%', height: '100%' }} />;
 };
 
 export default StarryBackground;

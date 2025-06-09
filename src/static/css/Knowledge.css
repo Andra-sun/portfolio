@@ -1,37 +1,96 @@
-.knowledge{
-    display: block;
-    overflow-x: auto;
-    margin: 0;
+.knowledge {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
 }
-.knowledge li{
-    display: flex;
-    flex-direction: column;
-    margin-bottom:3rem;
+
+.knowledge-section {
+    margin-bottom: 3rem;
 }
-.knowledge li .list{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+
+.knowledge-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--fc);
+    position: relative;
+    display: inline-block;
 }
-.knowledge li .list *{
-    padding: 10px;
-    margin: 10px;
-    border-radius: 12px;
-    background-color: var(--bgc3);
+
+.knowledge-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--main-color);
+    border-radius: 2px;
+}
+
+.knowledge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.knowledge-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 1.2rem;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-transform: capitalize;
-    transition: transform 0.3s;
+    gap: 0.8rem;
+}
 
+.card-content img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    transition: all 0.3s ease;
 }
-.knowledge li .list * img{
-    width: 50px;
+
+/* Filtro para inverter cores do ícone do Markdown */
+.card-content img[src*="markdown"],
+.card-content img[src*="django"],
+.card-content img[src*="github"] {
+    filter: invert(1);
 }
-.knowledge li .list *:hover{
-    transform: scale(1.1);
+
+.card-content h3 {
+    font-size: 0.9rem;
+    color: var(--fc);
+    margin: 0;
+    text-align: center;
 }
-.knowledge{
-    animation: fadeIn 1s ease-in-out;
+
+@media (max-width: 768px) {
+    .knowledge {
+        padding: 0.5rem;
+    }
+
+    .knowledge-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+    }
+
+    .knowledge-card {
+        padding: 1rem;
+    }
+
+    .card-content img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .card-content h3 {
+        font-size: 0.8rem;
+    }
 }

@@ -2,6 +2,7 @@ import React from "react";
 import "../static/css/Knowledge.css";
 import Card from "../elements/cardKnow";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 function Knowledge() {
     const { t } = useTranslation("projects");
@@ -18,6 +19,10 @@ function Knowledge() {
             {
                 name: "Javascript",
                 image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+            },
+            {
+                name: "Next.js",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
             },
             {
                 name: "React",
@@ -84,27 +89,54 @@ function Knowledge() {
         ],
     };
 
+    const containerVariants = {
+        hidden: { opacity: 1 },
+        visible: {
+            opacity: 1,
+            transition: {
+                delayChildren: 0.1,
+                staggerChildren: 0.05,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+        },
+    };
+
     return (
-        <div className="knowledge">
-            <ul>
-                <li>
-                    <h2>{t("projetos.lingefr")}</h2>
-                    <div className="list">
-                        {cards.linguagem.map((card) => (
-                            <Card key={card.name} image={card.image} name={card.name} />
-                        ))}
-                    </div>
-                </li>
-                <li>
-                    <h2>{t("projetos.ferramenta")}</h2>
-                    <div class="list">
-                        {cards.ferramenta.map((card) => (
-                            <Card key={card.name} image={card.image} name={card.name} />
-                        ))}
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <motion.div
+            className="knowledge"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+        >
+            <motion.div className="knowledge-section">
+                <h2>{t("projetos.lingefr")}</h2>
+                <div className="knowledge-grid">
+                    {cards.linguagem.map((card) => (
+                        <motion.div key={card.name} variants={itemVariants}>
+                            <Card {...card} />
+                        </motion.div>
+                    ))}
+                </div>
+            </motion.div>
+
+            <motion.div className="knowledge-section">
+                <h2>{t("projetos.ferramenta")}</h2>
+                <div className="knowledge-grid">
+                    {cards.ferramenta.map((card) => (
+                        <motion.div key={card.name} variants={itemVariants}>
+                            <Card {...card} />
+                        </motion.div>
+                    ))}
+                </div>
+            </motion.div>
+        </motion.div>
     );
 }
 

@@ -1,7 +1,6 @@
 {
-    "saudacao": "Opa, bão?! Eu sou <strong>Camile</strong>, prazer.",
-    "descricao1": "Sou desenvolvedora focada em <strong>Front-end</strong>, apaixonada por criar interfaces criativas, funcionais e com uma boa dose de personalidade. Trabalho principalmente com <strong>JavaScript</strong>, mas tô sempre testando novas ferramentas e linguagens.",
-    "descricao2": "Gosto de explorar todas as possibilidades da tecnologia — já me aventurei em redes com o <strong>Cisco Packet Tracer</strong>, experimentei o <strong>Godot</strong> pra criar jogos, e não paro por aí. Gosto mesmo é de aprender na prática.",
-    "convite": "Fica à vontade pra navegar pelo meu portfólio!"
-  }
-  
+    "saudacao": "Olá! Sou <strong>Camile</strong>, desenvolvedora Front-end.",
+    "descricao1": "Especializada em criar <strong>interfaces modernas</strong> e <strong>experiências digitais</strong> que combinam funcionalidade com design inovador. Trabalho principalmente com <strong>JavaScript</strong> e seu ecossistema, sempre em busca de novas tecnologias para expandir minhas capacidades.",
+    "descricao2": "Minha jornada na tecnologia é marcada pela curiosidade e versatilidade — desde desenvolvimento web até experimentações com <strong>desenvolvimento de jogos</strong> e <strong>redes de computadores</strong>. Acredito que a melhor forma de aprender é através da prática e da construção de projetos reais.",
+    "convite": "Explore meu portfólio e conheça um pouco do meu trabalho!"
+}

@@ -1,105 +1,83 @@
 html {
-  height: 100%;
+    height: 100%;
 }
 body {
-  margin: 0;
-  font-family: "Lexend", serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: "Lexend", serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
-  padding: 0.6rem;
-  min-height: 100vh;
-  max-height: 100vh;
-  display: flex;
-  flex-direction: row; 
-  justify-content: center;
-  align-items: center;
-  background-color: var(--bgc2);
+    padding: 0.6rem;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bgc2);
 
-  overflow: hidden;
+    overflow: hidden;
 }
-#root{
-  display: flex;
-  flex-direction: row; 
-  justify-content: space-around;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+#root {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
 }
-
 
 a {
-  color: var(--main-color);
-  text-decoration: none;
-  transition: transform 0.3s;
+    color: var(--main-color);
+    text-decoration: none;
+    transition: transform 0.3s;
 }
-a:hover{
-  color: var(--main-color-hover);
-  transform: scale(1.09);
+a:hover {
+    color: var(--main-color-hover);
+    transform: scale(1.09);
 }
 
 @media (max-width: 768px) {
-  body {
-    max-height: 90vh;
-  } /* teste diminuindo um pouco */
-
+    body {
+        max-height: 90vh;
+    }
 }
 
 :root {
-  --main-color: #dcc401;
-  --main-color-hover: #aa901b;
-  --fc: white;   
-  --fc2: rgb(207, 208, 209);
-  --bgc: #000513; 
-  --bgc2: #010118; 
-  --bgc3: #363a59;
-  --bgc4: #010218;
+    --main-color: #dcc401;
+    --main-color-hover: #aa901b;
+    --fc: white;
+    --fc2: rgb(207, 208, 209);
+    --bgc: #000513;
+    --bgc2: #010118;
+    --bgc3: #363a59;
+    --bgc4: #010218;
 }
-/* 
-  .light-theme {
-    --main-color: rgb(71, 204, 82);
-    --main-color-hover: rgb(63, 167, 72);
-    --bgc: #fff;  /* fundo do card*/
-/*    --fc: #000;   /* cor da fonte*/
-  /*  --bgc2: #dddddd; /*fundo do html*/
-   /* --bgc3: #ccc; /*fundo da lista*/
-   /* --bgc4: #ececec; /*fundo da lista hover*/
- /* } 
-*/
-
 
 @keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(20px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
-
-
-
-
 
 @font-face {
-  font-family: 'Unown';
-  src: url('../font/Unown.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: "Unown";
+    src: url("../font/Unown.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 .unown-font {
-  font-family: 'Unown', monospace;
+    font-family: "Unown", monospace;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");

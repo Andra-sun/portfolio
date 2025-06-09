@@ -1,9 +1,15 @@
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+
 const Card = ({ image, name, description, linguage, link1, link2 }) => {
     const { t } = useTranslation("projects");
 
     return (
-        <li>
+        <motion.li
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+        >
             <img src={image} alt="Project Thumbnail" />
             <div className="textArea">
                 <h2>{name}</h2>
@@ -18,7 +24,8 @@ const Card = ({ image, name, description, linguage, link1, link2 }) => {
                     <a href={link2}>{t("projetos.verMaisPag")}</a>
                 </div>
             </div>
-        </li>
+        </motion.li>
     );
 };
+
 export default Card;

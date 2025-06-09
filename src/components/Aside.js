@@ -1,13 +1,24 @@
-import React, { useState, useEffect } from "react";
-import "../static/css/Aside.css";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import useGTM from "../hooks/useGTM";
+import {
+    IoLogoGithub,
+    IoLogoLinkedin,
+    IoGlobe,
+    IoLocationSharp,
+    IoMail,
+    IoPaperPlane,
+    IoCloudDownload,
+    IoMenu,
+} from "react-icons/io5";
+import "../static/css/Aside.css";
 
 function Aside() {
-    const { trackLanguageChange, trackDownload, trackClick } = useGTM();
-
-    // locale
     const { i18n } = useTranslation();
+    const { trackLanguageChange, trackDownload, trackClick } = useGTM();
+    const [menuOpen, setMenuOpen] = useState(false);
+
     const handleLanguageChange = (event) => {
         const selectedLanguage = event.target.value;
         const currentLanguage = i18n.language;
@@ -23,26 +34,6 @@ function Aside() {
         trackLanguageChange(currentLanguage, selectedLanguage);
     };
 
-    // Letreiro
-    useEffect(() => {
-        const paragraphs = document.querySelectorAll(
-            "#mais-infos .text-container p"
-        );
-        paragraphs.forEach((p) => {
-            if (p.textContent.length > 13) {
-                p.classList.add("letreiro");
-            }
-        });
-    }, []);
-
-    //menu mobile
-    const [menuOpen, setMenuOpen] = useState(false);
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-        trackClick("menu-mobile", "button", menuOpen ? "close" : "open");
-    };
-
-    //download
     const downloadCV = () => {
         const link = document.createElement("a");
         link.href = "cv_27022025.pdf";
@@ -58,114 +49,204 @@ function Aside() {
         trackClick(platform, "social-link", url);
     };
 
-    return (
-        <aside
-            className={`Aside ${menuOpen ? "open" : ""}`}
-            data-testid="aside-component"
-        >
-            <div id="fixed">
-                <button className="menu-toggle" onClick={toggleMenu}>
-                    <div className={`hamburger ${menuOpen ? "open" : ""}`}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </button>
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+        trackClick("menu-mobile", "button", !menuOpen ? "open" : "close");
+    };
 
-                <select onChange={handleLanguageChange}>
-                    <option value="pt">pt</option>
-                    <option value="en">en</option>
-                    <option value="unown">un</option>
-                </select>
-            </div>
-            <div id="foto">
-                <img
-                    src="https://avatars.githubusercontent.com/u/111245270?v=4"
-                    alt="Imagem de perfil"
-                />
-            </div>
-            <div id="infoBar">
-                <div id="nomes">
-                    <h1 id="nome">Camile</h1>
-                    <p id="apelido">Andra</p>
+    return (
+        <>
+            <motion.div
+                className="language-select"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                role="region"
+                aria-label="Seletor de idioma"
+            >
+                <motion.select
+                    onChange={handleLanguageChange}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    aria-label="Selecione o idioma"
+                    role="combobox"
+                    aria-expanded="false"
+                    aria-controls="language-options"
+                    aria-haspopup="listbox"
+                    id="language-select"
+                >
+                    <option value="pt" aria-selected={i18n.language === "pt"}>
+                        Português
+                    </option>
+                    <option value="en" aria-selected={i18n.language === "en"}>
+                        English
+                    </option>
+                    <option
+                        value="unown"
+                        aria-selected={i18n.language === "unown"}
+                    >
+                        Unown
+                    </option>
+                </motion.select>
+            </motion.div>
+
+            <button
+                className="menu-toggle"
+                onClick={toggleMenu}
+                aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+                aria-expanded={menuOpen}
+            >
+                <div className={`hamburger ${menuOpen ? "open" : ""}`}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                <div id="mais-infos">
-                    <a
+            </button>
+
+            <motion.aside
+                className={menuOpen ? "open" : ""}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                role="complementary"
+                aria-label="Informações de perfil e contato"
+            >
+                <motion.div
+                    className="profile-image"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    role="img"
+                    aria-label="Foto de perfil de Camile"
+                >
+                    <img
+                        src="https://avatars.githubusercontent.com/u/111245270?v=4"
+                        alt="Imagem de perfil"
+                    />
+                </motion.div>
+
+                <motion.div
+                    className="profile-info"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    role="region"
+                    aria-label="Informações básicas"
+                >
+                    <h1>Camile</h1>
+                    <p>Andra</p>
+                </motion.div>
+
+                <motion.div
+                    className="contact-info"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    role="region"
+                    aria-label="Informações de contato"
+                >
+                    <motion.a
                         href="https://t.me/andra_sun"
+                        whileHover={{ scale: 1.05, x: 5 }}
+                        whileTap={{ scale: 0.95 }}
                         onClick={() =>
                             handleSocialClick(
                                 "telegram",
                                 "https://t.me/andra_sun"
                             )
                         }
+                        aria-label="Telegram: andra-sun"
                     >
-                        <i className="fi fi-brands-telegram">
-                            <div className="text-container">
-                                <p>andra-sun</p>
-                            </div>
-                        </i>
-                    </a>
-                    <a
-                        href="https://www.google.com/maps/place/Guanambi+-+BA/@-14.1890625,-43.1547377,10z/data=!3m1!4b1!4m6!3m5!1s0x75ac2d5ea46c245:0xdbbd134623c62738!8m2!3d-14.2193421!4d-42.7796873!16s%2Fm%2F04lghl4?entry=ttu&g_ep=EgoyMDI1MDQxMy4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
+                        <IoPaperPlane className="icon" aria-hidden="true" />
+                        <span>andra-sun</span>
+                    </motion.a>
+
+                    <motion.a
+                        href="https://www.google.com/maps/place/Guanambi+-+BA"
+                        whileHover={{ scale: 1.05, x: 5 }}
+                        whileTap={{ scale: 0.95 }}
                         onClick={() => handleSocialClick("location", "maps")}
+                        aria-label="Localização: Guanambi-BA"
                     >
-                        <i className="fi fi-sr-map-marker">
-                            <div className="text-container">
-                                <p>Guanambi-BA</p>
-                            </div>
-                        </i>
-                    </a>
-                    <a
+                        <IoLocationSharp className="icon" aria-hidden="true" />
+                        <span>Guanambi-BA</span>
+                    </motion.a>
+
+                    <motion.a
                         href="mailto:camilea_guimaraes@outlook.com"
+                        whileHover={{ scale: 1.05, x: 5 }}
+                        whileTap={{ scale: 0.95 }}
                         onClick={() => handleSocialClick("email", "mailto")}
+                        aria-label="Email: camilea_guimaraes@outlook.com"
                     >
-                        <i className="fi fi-sr-envelope">
-                            <div className="text-container">
-                                <p>camilea_guimaraes@outlook.com</p>
-                            </div>
-                        </i>
-                    </a>
-                </div>
-                <div id="redes">
-                    <a
+                        <IoMail className="icon" aria-hidden="true" />
+                        <span>camilea_guimaraes@outlook.com</span>
+                    </motion.a>
+                </motion.div>
+
+                <motion.div
+                    className="social-links"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    role="region"
+                    aria-label="Redes sociais"
+                >
+                    <motion.a
                         href="https://github.com/Andra-sun"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
                         onClick={() =>
                             handleSocialClick(
                                 "github",
                                 "https://github.com/Andra-sun"
                             )
                         }
+                        aria-label="GitHub"
                     >
-                        <i className="fi fi-brands-github"></i>
-                    </a>
-                    <a
+                        <IoLogoGithub className="icon" aria-hidden="true" />
+                    </motion.a>
+                    <motion.a
                         href="https://linkedin.com/in/camile-andrade-guimaraes"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
                         onClick={() =>
                             handleSocialClick(
                                 "linkedin",
                                 "https://linkedin.com/in/camile-andrade-guimaraes"
                             )
                         }
+                        aria-label="LinkedIn"
                     >
-                        <i className="fi fi-brands-linkedin"></i>
-                    </a>
-                    <a
+                        <IoLogoLinkedin className="icon" aria-hidden="true" />
+                    </motion.a>
+                    <motion.a
                         href="https://Andra-sun.github.io"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
                         onClick={() =>
                             handleSocialClick(
                                 "portfolio",
                                 "https://Andra-sun.github.io"
                             )
                         }
+                        aria-label="Portfólio"
                     >
-                        <i className="fi fi-sr-site"></i>
-                    </a>
-                </div>
-                <button id="cv" onClick={downloadCV}>
-                    <i className="fi fi-rs-download"></i> Download CV
-                </button>
-            </div>
-        </aside>
+                        <IoGlobe className="icon" aria-hidden="true" />
+                    </motion.a>
+                </motion.div>
+
+                <motion.button
+                    className="cv-button"
+                    onClick={downloadCV}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    aria-label="Download do currículo"
+                >
+                    <IoCloudDownload className="icon" aria-hidden="true" />
+                    Download CV
+                </motion.button>
+            </motion.aside>
+        </>
     );
 }
 
