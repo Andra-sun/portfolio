@@ -48,6 +48,10 @@ function Knowledge() {
                 name: "Markdown",
                 image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg",
             },
+            {
+                name: "Tailwind",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+            },
         ],
         ferramenta: [
             {
@@ -85,6 +89,10 @@ function Knowledge() {
             {
                 name: "Cisco PT",
                 image: "https://hurbad.com/wp-content/uploads/2021/12/Cisco-Packet-Tracer.png",
+            },
+            {
+                name: "Gimp",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gimp/gimp-original.svg",
             },
         ],
     };
