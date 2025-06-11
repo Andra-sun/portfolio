@@ -13,25 +13,26 @@
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.136),
         inset 0 0 10px rgba(255, 255, 255, 0.238);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .App::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 0px;
+    height: 0px;
 }
 
 .App::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0);
-    border-radius: 10px;
+    background: transparent;
 }
 
 .App::-webkit-scrollbar-thumb {
-    background: var(--main-color);
-    border-radius: 10px;
+    background: transparent;
+    border: none;
 }
 
 .App::-webkit-scrollbar-thumb:hover {
-    background: var(--main-color-hover);
+    background: transparent;
 }
 
 .App h1 {
