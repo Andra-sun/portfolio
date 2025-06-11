@@ -9,8 +9,16 @@ function Project() {
         {
             name: "BeeFleet",
             image: "https://avatars.githubusercontent.com/t/12972006?s=116&v=4",
-            description: t("projetos.adotDes"),
-            linguage: ["javascript", "react", "python", "tailwindcss", "typescript", "node.js", "next.js" ],
+            description: t("projetos.beefleet"),
+            linguage: [
+                "javascript",
+                "react",
+                "python",
+                "tailwindcss",
+                "typescript",
+                "node.js",
+                "next.js",
+            ],
             link1: "https://github.com/HublastX/BeeFleet",
             link2: "https://hublast.com/beefleet/",
         },
