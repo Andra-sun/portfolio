@@ -13,7 +13,7 @@
     border-radius: 6px;
     cursor: pointer;
     outline: none;
-    width: 2.7rem;
+    width: 3rem;
 }
 
 .menu-toggle {
@@ -34,6 +34,7 @@ aside {
         inset 0 0 10px rgba(255, 255, 255, 0.238);
     border: 1px solid rgba(255, 255, 255, 0.1);
     margin: 2rem;
+    margin-top: 6rem;
 }
 
 .aside-header select {
