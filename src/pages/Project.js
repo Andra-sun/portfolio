@@ -12,11 +12,7 @@ function Project() {
             description: t("projetos.beefleet"),
             linguage: [
                 "javascript",
-                "react",
-                "python",
                 "tailwindcss",
-                "typescript",
-                "node.js",
                 "next.js",
             ],
             link1: "https://github.com/HublastX/BeeFleet",
