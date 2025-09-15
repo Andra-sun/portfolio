@@ -29,7 +29,7 @@ function Stars() {
     useEffect(() => {
         // Inicializa as estrelas
         setStars({
-            background: generateStars(50, "bg"), // 50 estrelas grandes
+            background: generateStars(100, "bg"), // 50 estrelas grandes
             foreground: generateStars(100, "fg"), // 100 estrelas pequenas
             shooting: [],
         });
