@@ -2,10 +2,12 @@ import { Link, useLocation } from "react-router-dom";
 import { IoPerson, IoRocket, IoCodeSlash, IoSchool } from "react-icons/io5";
 import { motion } from "framer-motion";
 import "../static/css/Nav.css";
+import { useTranslation } from "react-i18next";
 
 function Nav() {
     const location = useLocation();
     const currentPath = location.pathname;
+    const { t } = useTranslation("nav");
 
     return (
         <motion.nav
@@ -30,8 +32,8 @@ function Nav() {
                         className={`nav-link ${
                             currentPath === "/" ? "active" : ""
                         }`}
-                        data-tooltip="sobre mim"
-                        aria-label="Sobre mim"
+                        data-tooltip={t("about")}
+                        aria-label={t("about")}
                         aria-current={currentPath === "/" ? "page" : undefined}
                     >
                         <IoPerson className="nav-icon" aria-hidden="true" />
@@ -48,8 +50,8 @@ function Nav() {
                         className={`nav-link ${
                             currentPath === "/experiencia" ? "active" : ""
                         }`}
-                        data-tooltip="experiência"
-                        aria-label="Experiência"
+                        data-tooltip={t("experience")}
+                        aria-label={t("experience")}
                         aria-current={
                             currentPath === "/experiencia" ? "page" : undefined
                         }
@@ -68,8 +70,8 @@ function Nav() {
                         className={`nav-link ${
                             currentPath === "/projetos" ? "active" : ""
                         }`}
-                        data-tooltip="projetos"
-                        aria-label="Projetos"
+                        data-tooltip={t("projects")}
+                        aria-label={t("projects")}
                         aria-current={
                             currentPath === "/projetos" ? "page" : undefined
                         }
@@ -88,8 +90,8 @@ function Nav() {
                         className={`nav-link ${
                             currentPath === "/certificado" ? "active" : ""
                         }`}
-                        data-tooltip="certificados"
-                        aria-label="Certificados"
+                        data-tooltip={t("certificates")}
+                        aria-label={t("certificates")}
                         aria-current={
                             currentPath === "/certificado" ? "page" : undefined
                         }
