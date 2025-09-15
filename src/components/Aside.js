@@ -72,11 +72,11 @@ function Aside() {
                     aria-haspopup="listbox"
                     id="language-select"
                 >
-                    <option value="pt" aria-selected={i18n.language === "pt"}>
-                        Português
-                    </option>
                     <option value="en" aria-selected={i18n.language === "en"}>
                         English
+                    </option>
+                    <option value="pt" aria-selected={i18n.language === "pt"}>
+                        Português
                     </option>
                     <option
                         value="unown"
