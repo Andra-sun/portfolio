@@ -43,8 +43,8 @@ function Diploma() {
                 title: "Scrum Fundamentals Certified ",
                 issuer: "SCRUMstudy",
                 date: "2025",
-                pdfUrl: "/pdf/oracleDatabaseDesigne.pdf",
-                logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scrum/scrum-original.svg",
+                pdfUrl: "/pdf/ScrumFundamentalsCertified-CamileAndradeGuimaraes-1107715.pdf",
+                logo: "https://cdn.worldvectorlogo.com/logos/scrumstudy-1.svg",
             },
             {
                 title: "Oracle Database Design",
