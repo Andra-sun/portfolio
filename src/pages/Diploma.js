@@ -20,7 +20,7 @@ function Diploma() {
                 title: "Sistemas Distribuídos e Mobile e AWS",
                 issuer: "Unifg",
                 date: "2025",
-                pdfUrl: "/pdf/SistemasDistribuidosEMobileeAWS.pdf",
+                pdfUrl: "/pdf/SistemasDistribuídosEMobileeAWS.pdf",
                 logo: "https://images.even3.com/LS4uQhbpYk6dxggsSrV67lvALQQ=/fit-in/250x250/smart/https://static.even3.com/logos/DcmE-mRWkAAEqXy-removebg-preview1.f7b34822fc3c4985a7ea.png",
             },
             {
