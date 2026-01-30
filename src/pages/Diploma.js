@@ -10,6 +10,41 @@ function Diploma() {
     const certificates = {
         academic: [
             {
+                title: "Usabilidade, Desenvolvimento Web, Mobile e Jogos",
+                issuer: "Unifg",
+                date: "2025",
+                pdfUrl: "/pdf/UsabilidadeDesenvolvimentoWebMobileEJogos.pdf",
+                logo: "https://images.even3.com/LS4uQhbpYk6dxggsSrV67lvALQQ=/fit-in/250x250/smart/https://static.even3.com/logos/DcmE-mRWkAAEqXy-removebg-preview1.f7b34822fc3c4985a7ea.png",
+            },
+            {
+                title: "Sistemas Distribuídos e Mobile e AWS",
+                issuer: "Unifg",
+                date: "2025",
+                pdfUrl: "/pdf/SistemasDistribuidosEMobileeAWS.pdf",
+                logo: "https://images.even3.com/LS4uQhbpYk6dxggsSrV67lvALQQ=/fit-in/250x250/smart/https://static.even3.com/logos/DcmE-mRWkAAEqXy-removebg-preview1.f7b34822fc3c4985a7ea.png",
+            },
+            {
+                title: "Sistemas Distribuídos e Mobile",
+                issuer: "Unifg",
+                date: "2025",
+                pdfUrl: "/pdf/SistemasDistribuidosEMobile.pdf",
+                logo: "https://images.even3.com/LS4uQhbpYk6dxggsSrV67lvALQQ=/fit-in/250x250/smart/https://static.even3.com/logos/DcmE-mRWkAAEqXy-removebg-preview1.f7b34822fc3c4985a7ea.png",
+            },
+            {
+                title: "Modelos, Métodos e Técnicas da Engenharia de Software",
+                issuer: "Unifg",
+                date: "2025",
+                pdfUrl: "/pdf/ModelosMétodosETecnicasDaEngenhariaDeSoftware.pdf",
+                logo: "https://images.even3.com/LS4uQhbpYk6dxggsSrV67lvALQQ=/fit-in/250x250/smart/https://static.even3.com/logos/DcmE-mRWkAAEqXy-removebg-preview1.f7b34822fc3c4985a7ea.png",
+            },
+            {
+                title: "Gestão e Qualidade de Software",
+                issuer: "Unifg",
+                date: "2025",
+                pdfUrl: "/pdf/GestãoEQualidadeDeSoftware.pdf",
+                logo: "https://images.even3.com/LS4uQhbpYk6dxggsSrV67lvALQQ=/fit-in/250x250/smart/https://static.even3.com/logos/DcmE-mRWkAAEqXy-removebg-preview1.f7b34822fc3c4985a7ea.png",
+            },
+            {
                 title: "Ambientes Computacionais e Conectividade",
                 issuer: "Unifg",
                 date: "2024",
