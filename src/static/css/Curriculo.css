@@ -22,7 +22,7 @@ body {
 }
 
 .resume-container {
-    width: 210mm;
+    width: 230mm;
     min-height: 297mm;
     margin: 0 auto;
     background-color: var(--paper-color);
@@ -258,8 +258,10 @@ body {
 
     .resume-container {
         box-shadow: none;
-        width: 210mm;
-        min-height: 297mm;
+        width: 100% !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        /* min-height: 297mm; */
         padding: 12mm 12mm 0 12mm;
         margin: 0;
         display: block;

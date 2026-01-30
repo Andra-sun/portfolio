@@ -10,7 +10,6 @@ import {
     IoMail,
     IoPaperPlane,
     IoCloudDownload,
-    IoMenu,
 } from "react-icons/io5";
 import "../static/css/Aside.css";
 

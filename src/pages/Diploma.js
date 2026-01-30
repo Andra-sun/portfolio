@@ -40,6 +40,13 @@ function Diploma() {
         ],
         professional: [
             {
+                title: "Scrum Fundamentals Certified ",
+                issuer: "SCRUMstudy",
+                date: "2025",
+                pdfUrl: "/pdf/ScrumFundamentalsCertified-CamileAndradeGuimaraes-1107715.pdf",
+                logo: "https://cdn.worldvectorlogo.com/logos/scrumstudy-1.svg",
+            },
+            {
                 title: "Oracle Database Design",
                 issuer: "Oracle Academy",
                 date: "2024",
