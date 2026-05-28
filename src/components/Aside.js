@@ -202,13 +202,13 @@ function Aside() {
                         <IoLogoGithub className="icon" aria-hidden="true" />
                     </motion.a>
                     <motion.a
-                        href="https://linkedin.com/in/camile-andrade-guimaraes"
+                        href="https://linkedin.com/in/andra-sun"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() =>
                             handleSocialClick(
                                 "linkedin",
-                                "https://linkedin.com/in/camile-andrade-guimaraes"
+                                "https://linkedin.com/in/andra-sun"
                             )
                         }
                         aria-label="LinkedIn"
