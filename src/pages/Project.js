@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "../static/css/Project.css";
 import Card from "../elements/cardProject";
+import { AnimatePresence, motion } from "framer-motion";
+import { createPortal } from "react-dom";
 
 function Project() {
     const { t } = useTranslation("projects");
+
+    const [galleryImages, setGalleryImages] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
     const cards = [
         {
             name: "BeeFleet",
             image: "https://avatars.githubusercontent.com/t/12972006?s=116&v=4",
             description: t("projetos.beefleet"),
-            linguage: [
-                "javascript",
-                "tailwindcss",
-                "next.js",
-            ],
+            linguage: ["javascript", "tailwindcss", "next.js"],
             link1: "https://github.com/HublastX/BeeFleet",
             link2: "https://hublast.com/beefleet/",
+            images: [
+                "https://picsum.photos/seed/beefleet1/800/600",
+                "https://picsum.photos/seed/beefleet2/800/600",
+                "https://picsum.photos/seed/beefleet3/800/600",
+            ],
         },
         {
             name: "Adote um pet",
@@ -25,6 +32,11 @@ function Project() {
             linguage: ["javascript", "django", "python"],
             link1: "https://github.com/Adote-um-Pet-Web",
             link2: "https://adoteumpet.up.railway.app/",
+            images: [
+                "https://picsum.photos/seed/aqp1/800/600",
+                "https://picsum.photos/seed/aqp2/800/600",
+                "https://picsum.photos/seed/aqp3/800/600",
+            ],
         },
         {
             name: "Book Guardian",
@@ -33,6 +45,11 @@ function Project() {
             linguage: ["javascript", "django", "python"],
             link1: "https://github.com/A3-P",
             link2: "https://book-guardian-production.up.railway.app/",
+            images: [
+                "https://picsum.photos/seed/bg1/800/600",
+                "https://picsum.photos/seed/bg2/800/600",
+                "https://picsum.photos/seed/bg3/800/600",
+            ],
         },
         {
             name: "Shark",
@@ -41,6 +58,11 @@ function Project() {
             linguage: ["ruby", "jekyll"],
             link1: "https://github.com/Andra-sun/Andra-sun.github.io",
             link2: "https://andra-sun.github.io/",
+            images: [
+                "https://picsum.photos/seed/shark1/800/600",
+                "https://picsum.photos/seed/shark2/800/600",
+                "https://picsum.photos/seed/shark3/800/600",
+            ],
         },
         {
             name: "Pixel Mart",
@@ -49,8 +71,28 @@ function Project() {
             linguage: ["javascript", "python"],
             link1: "https://github.com/wendellast/Pixel-Mart",
             link2: "https://web-production-b8d4.up.railway.app/",
+            images: [
+                "https://picsum.photos/seed/aq1/800/600",
+                "https://picsum.photos/seed/aq2/800/600",
+                "https://picsum.photos/seed/aq3/800/600",
+            ],
         },
     ];
+
+    const openGallery = (images) => {
+        setGalleryImages(images);
+        setCurrentIndex(0);
+    };
+
+    const closeGallery = () => setGalleryImages(null);
+
+    const nextImage = () =>
+        setCurrentIndex((prev) => (prev + 1) % galleryImages.length);
+
+    const prevImage = () =>
+        setCurrentIndex(
+            (prev) => (prev - 1 + galleryImages.length) % galleryImages.length,
+        );
 
     return (
         <div className="projetos">
@@ -64,9 +106,57 @@ function Project() {
                         linguage={card.linguage}
                         link1={card.link1}
                         link2={card.link2}
+                        onOpenGallery={openGallery}
+                        images={card.images}
                     />
                 ))}
             </ul>
+
+            {createPortal(
+                <AnimatePresence>
+                    {galleryImages && (
+                        <motion.div
+                            className="galleryOverlay"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={closeGallery}
+                        >
+                            <div
+                                className="galleryContent"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <button
+                                    className="galleryClose"
+                                    onClick={closeGallery}
+                                >
+                                    x
+                                </button>
+                                <button
+                                    className="galleryNav galleryPrev"
+                                    onClick={prevImage}
+                                >
+                                    ‹
+                                </button>
+
+                                <img
+                                    src={galleryImages[currentIndex]}
+                                    alt=""
+                                    className="galleryImage"
+                                />
+
+                                <button
+                                    className="galleryNav galleryNext"
+                                    onClick={nextImage}
+                                >
+                                    ›
+                                </button>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>,
+                document.body
+            )}
         </div>
     );
 }

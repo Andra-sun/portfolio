@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
-const Card = ({ image, name, description, linguage, link1, link2 }) => {
+const Card = ({ image, name, description, linguage, link1, link2, onOpenGallery, images  }) => {
     const { t } = useTranslation("projects");
 
     return (
@@ -12,7 +12,10 @@ const Card = ({ image, name, description, linguage, link1, link2 }) => {
         >
             <img src={image} alt="Project Thumbnail" />
             <div className="textArea">
-                <h2>{name}</h2>
+                <div className="row">
+                    <h2>{name}</h2>
+                    <button onClick={() => onOpenGallery(images || [image])}>{t("projetos.galeria")}</button>
+                </div>
                 <p>{description}</p>
                 <div className="technologies">
                     {linguage?.map((tech, index) => (
