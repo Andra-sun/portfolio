@@ -20,9 +20,12 @@ function Project() {
             link1: "https://github.com/HublastX/BeeFleet",
             link2: "https://hublast.com/beefleet/",
             images: [
-                "https://picsum.photos/seed/beefleet1/800/600",
-                "https://picsum.photos/seed/beefleet2/800/600",
-                "https://picsum.photos/seed/beefleet3/800/600",
+                "/img/projects/beefleet/bf1.png",
+                "/img/projects/beefleet/bf2.png",
+                "/img/projects/beefleet/bf3.png",
+                "/img/projects/beefleet/bf4.png",
+                "/img/projects/beefleet/bf5.png",
+                "/img/projects/beefleet/bf6.png",
             ],
         },
         {
