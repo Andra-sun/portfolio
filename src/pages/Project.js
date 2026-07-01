@@ -49,9 +49,8 @@ function Project() {
             link1: "https://github.com/A3-P",
             link2: "https://book-guardian-production.up.railway.app/",
             images: [
-                "https://picsum.photos/seed/bg1/800/600",
-                "https://picsum.photos/seed/bg2/800/600",
-                "https://picsum.photos/seed/bg3/800/600",
+                "/img/projects/bookguardian/bg1.png",
+                "/img/projects/bookguardian/bg2.png",
             ],
         },
         {
