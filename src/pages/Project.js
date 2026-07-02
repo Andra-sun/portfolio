@@ -27,6 +27,7 @@ function Project() {
                 "/img/projects/beefleet/bf5.png",
                 "/img/projects/beefleet/bf6.png",
             ],
+            able: false,
         },
         {
             name: "Adote um pet",
@@ -40,6 +41,7 @@ function Project() {
                 "https://picsum.photos/seed/aqp2/800/600",
                 "https://picsum.photos/seed/aqp3/800/600",
             ],
+            able: true,
         },
         {
             name: "Book Guardian",
@@ -52,6 +54,7 @@ function Project() {
                 "/img/projects/bookguardian/bg1.png",
                 "/img/projects/bookguardian/bg2.png",
             ],
+            able: true,
         },
         {
             name: "Shark",
@@ -65,6 +68,7 @@ function Project() {
                 "https://picsum.photos/seed/shark2/800/600",
                 "https://picsum.photos/seed/shark3/800/600",
             ],
+            able: true,
         },
         {
             name: "Pixel Mart",
@@ -78,6 +82,7 @@ function Project() {
                 "https://picsum.photos/seed/aq2/800/600",
                 "https://picsum.photos/seed/aq3/800/600",
             ],
+            able: false,
         },
     ];
 
@@ -110,6 +115,7 @@ function Project() {
                         link2={card.link2}
                         onOpenGallery={openGallery}
                         images={card.images}
+                        able={card.able}
                     />
                 ))}
             </ul>
@@ -157,7 +163,7 @@ function Project() {
                         </motion.div>
                     )}
                 </AnimatePresence>,
-                document.body
+                document.body,
             )}
         </div>
     );

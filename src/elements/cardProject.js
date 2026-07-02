@@ -1,8 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
-const Card = ({ image, name, description, linguage, link1, link2, onOpenGallery, images  }) => {
+const Card = ({ image, name, description, linguage, link1, link2, onOpenGallery, images, able=true  }) => {
     const { t } = useTranslation("projects");
+    const isDisable = able === false;
 
     return (
         <motion.li
@@ -24,7 +25,14 @@ const Card = ({ image, name, description, linguage, link1, link2, onOpenGallery,
                 </div>
                 <div className="links">
                     <a href={link1}>{t("projetos.verMais")}</a>
-                    <a href={link2}>{t("projetos.verMaisPag")}</a>
+
+                    {isDisable? 
+                        <a href="#" >{t("projetos.indisponivel")}</a>
+
+                    :
+                     <a href={link2}>{t("projetos.verMaisPag")}</a>
+
+                    }
                 </div>
             </div>
         </motion.li>
