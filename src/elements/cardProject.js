@@ -1,7 +1,17 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
-const Card = ({ image, name, description, linguage, link1, link2, onOpenGallery, images, able=true  }) => {
+const Card = ({
+    image,
+    name,
+    description,
+    linguage,
+    link1,
+    link2,
+    onOpenGallery,
+    images,
+    able = true,
+}) => {
     const { t } = useTranslation("projects");
     const isDisable = able === false;
 
@@ -15,7 +25,9 @@ const Card = ({ image, name, description, linguage, link1, link2, onOpenGallery,
             <div className="textArea">
                 <div className="row">
                     <h2>{name}</h2>
-                    <button onClick={() => onOpenGallery(images || [image])}>{t("projetos.galeria")}</button>
+                    <button onClick={() => onOpenGallery(images || [image])}>
+                        {t("projetos.galeria")}
+                    </button>
                 </div>
                 <p>{description}</p>
                 <div className="technologies">
@@ -26,13 +38,18 @@ const Card = ({ image, name, description, linguage, link1, link2, onOpenGallery,
                 <div className="links">
                     <a href={link1}>{t("projetos.verMais")}</a>
 
-                    {isDisable? 
-                        <a href="#" >{t("projetos.indisponivel")}</a>
-
-                    :
-                     <a href={link2}>{t("projetos.verMaisPag")}</a>
-
-                    }
+                    {isDisable ? (
+                        // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                        <a
+                            href="#"
+                            aria-disabled="true"
+                            onClick={(e) => e.preventDefault()}
+                        >
+                            {t("projetos.indisponivel")}
+                        </a>
+                    ) : (
+                        <a href={link2}>{t("projetos.verMaisPag")}</a>
+                    )}
                 </div>
             </div>
         </motion.li>
