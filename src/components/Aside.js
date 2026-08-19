@@ -144,6 +144,7 @@ function Aside() {
                         href="https://t.me/andra_sun"
                         whileHover={{ scale: 1.05, x: 5 }}
                         whileTap={{ scale: 0.95 }}
+                        target="_blank"
                         onClick={() =>
                             handleSocialClick(
                                 "telegram",
@@ -191,6 +192,7 @@ function Aside() {
                         href="https://github.com/Andra-sun"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
+                        target="_blank"
                         onClick={() =>
                             handleSocialClick(
                                 "github",
@@ -202,13 +204,14 @@ function Aside() {
                         <IoLogoGithub className="icon" aria-hidden="true" />
                     </motion.a>
                     <motion.a
-                        href="https://linkedin.com/in/andra-sun"
+                        href="https://linkedin.com/in/camile-andrade-guimaraes"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
+                        target="_blank"
                         onClick={() =>
                             handleSocialClick(
                                 "linkedin",
-                                "https://linkedin.com/in/andra-sun"
+                                "https://linkedin.com/in/camile-andrade-guimaraes"
                             )
                         }
                         aria-label="LinkedIn"
@@ -219,6 +222,7 @@ function Aside() {
                         href="https://Andra-sun.github.io"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
+                        target="_blank"
                         onClick={() =>
                             handleSocialClick(
                                 "portfolio",
