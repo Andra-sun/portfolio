@@ -10,6 +10,13 @@ function Diploma() {
     const certificates = {
         academic: [
             {
+                title: "Inovação, sustentabilidade e competitividade empresarial",
+                issuer: "Unifg",
+                date: "2026",
+                pdfUrl: "/pdf/InovaçãoSustentabilidadeECompetitividadeEmpresarial.pdf",
+                logo: "https://images.even3.com/LS4uQhbpYk6dxggsSrV67lvALQQ=/fit-in/250x250/smart/https://static.even3.com/logos/DcmE-mRWkAAEqXy-removebg-preview1.f7b34822fc3c4985a7ea.png",
+            },
+            {
                 title: "Usabilidade, Desenvolvimento Web, Mobile e Jogos",
                 issuer: "Unifg",
                 date: "2025",
@@ -100,14 +107,14 @@ function Diploma() {
                 issuer: "Cisco",
                 date: "2024",
                 pdfUrl: "/pdf/ciscoNetworkingBasics.pdf",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/500px-Cisco_logo_blue_2016.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20180716213716",
             },
             {
                 title: "Cybersecurity Essentials",
                 issuer: "Cisco",
                 date: "2024",
                 pdfUrl: "/pdf/ciscoCyberSecurity.pdf",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/500px-Cisco_logo_blue_2016.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20180716213716",
             },
         ],
     };
